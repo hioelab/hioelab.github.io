@@ -4,7 +4,12 @@ description: Hongik University — Operations & Experience Lab
 # 만약 저장소 이름이 hioelab.github.io 가 아니라면(예: github.io-),
 # baseurl 을 "/저장소이름" 으로 바꾸세요. 예: baseurl: "/github.io-"
 baseurl: ""
-permalink: /blog/:year/:month/:day/:title/
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      permalink: /blog/:year/:month/:day/:title/
 # 빌드에서 제외할 파일(웹사이트엔 안 나옴, 폴더엔 남음)
 exclude:
   - "GitHub_Pages_배포가이드.md"
