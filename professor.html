@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="style.css">
+<title>Professor · Operations & Experience Lab — Hongik University</title>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><span class="dot"></span><span>Operations &amp; Experience Lab</span></a>
+    <nav>
+      <ul>
+        <li><a href="index.html" data-page="index.html">Home</a></li>
+        <li><a href="professor.html" data-page="professor.html">Professor</a></li>
+        <li><a href="members.html" data-page="members.html">Members</a></li>
+        <li><a href="research.html" data-page="research.html">Research</a></li>
+        <li><a href="projects.html" data-page="projects.html">Projects</a></li>
+        <li><a href="publications.html" data-page="publications.html">Publications</a></li>
+        <li><a href="news.html" data-page="news.html">News</a></li>
+        <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+        <li><button class="langbtn" onclick="toggleLang()"><span class="lang-en">한국어</span><span class="lang-ko">ENG</span></button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="professor">
+  <div class="wrap">
+    <div class="eyebrow"><span class="lang-en">Professor</span><span class="lang-ko">교수</span></div>
+    <h2 class="sec"><span class="lang-en">Director</span><span class="lang-ko">지도교수</span></h2>
+    <div class="pi">
+      <div class="photo-wrap">
+        <img src="kim.jpg" alt="Professor Seungbeom Kim" onerror="this.style.display='none';this.parentElement.querySelector('.photo').style.display='flex'">
+        <div class="photo"><span class="lang-en">Add photo as<br>kim.jpg</span><span class="lang-ko">kim.jpg 로<br>사진 추가</span></div>
+        <div class="photo-cv">
+          <a href="CV_Seungbeom_Kim.pdf" download><span class="lang-en">⬇ Download CV (PDF)</span><span class="lang-ko">⬇ CV 다운로드 (PDF)</span></a>
+        </div>
+      </div>
+      <div>
+        <h3>Seungbeom Kim <span style="color:var(--muted);font-weight:600;font-size:18px">김승범</span></h3>
+        <div class="role"><span class="lang-en">Associate Professor, College of Business Administration, Hongik University (since 2015)</span><span class="lang-ko">홍익대학교 경영대학 부교수 (2015년~)</span></div>
+        <p class="block lang-en">Seungbeom Kim is an Associate Professor in the College of Business Administration at Hongik University. His research bridges behavioral science and data science to study operations management, revenue management, quality management, and customer experience. He received his Ph.D. in Operations Management from the Marshall School of Business at the University of Southern California, with a dissertation on bounded rationality and revenue management.</p>
+        <p class="block lang-en">He has led applied projects with firms and public institutions including Apple Korea, LG Uplus, Nu Skin Korea, and several government ministries and research foundations, and is Co-Founder &amp; COO of Unimindlab, a disability-inclusive technology company. He served as Department Chair (2024–2025) and Deputy Director of the Convergence and Open Sharing System for Biohealth at Hongik University.</p>
+        <p class="block lang-ko">김승범 교수는 홍익대학교 경영대학 부교수로, 행동과학과 데이터과학을 기반으로 운영 관리, 수익 관리, 품질 경영, 고객 경험을 연구합니다. University of Southern California, Marshall School of Business에서 운영관리 전공으로 박사 학위를 취득했으며, 박사 논문 주제는 제한된 합리성과 수익 관리였습니다.</p>
+        <p class="block lang-ko">Apple Korea, LG Uplus, 뉴스킨코리아 등 기업과 정부 부처·연구재단의 응용 프로젝트를 다수 수행했으며, 장애 포용 기술 기업 유니마인드랩의 공동창업자 겸 COO입니다. 홍익대 경영대학 학과장(2024–2025), 바이오헬스 융합·개방공유체계 부단장을 역임했습니다.</p>
+        <ul class="facts">
+          <li><span class="lang-en">Ph.D. in Operations Management — Marshall School of Business, USC</span><span class="lang-ko">운영관리 박사 — USC Marshall School of Business</span></li>
+          <li><span class="lang-en">M.S. in Operations Research — Columbia University</span><span class="lang-ko">운영과학 석사 — Columbia University</span></li>
+          <li><span class="lang-en">B.S. in Industrial &amp; Management Engineering — POSTECH</span><span class="lang-ko">산업경영공학 학사 — POSTECH</span></li>
+          <li><span class="lang-en">Email: sbkim@hongik.ac.kr · Office: +82-2-320-1751</span><span class="lang-ko">이메일: sbkim@hongik.ac.kr · 연구실: 02-320-1751</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> Operations &amp; Experience Lab · Hongik University. <span class="lang-en">Hongik University, College of Business Administration.</span><span class="lang-ko">홍익대학교 경영대학.</span></div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="style.css">
+<title>Projects · Operations & Experience Lab — Hongik University</title>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><span class="dot"></span><span>Operations &amp; Experience Lab</span></a>
+    <nav>
+      <ul>
+        <li><a href="index.html" data-page="index.html">Home</a></li>
+        <li><a href="professor.html" data-page="professor.html">Professor</a></li>
+        <li><a href="members.html" data-page="members.html">Members</a></li>
+        <li><a href="research.html" data-page="research.html">Research</a></li>
+        <li><a href="projects.html" data-page="projects.html">Projects</a></li>
+        <li><a href="publications.html" data-page="publications.html">Publications</a></li>
+        <li><a href="news.html" data-page="news.html">News</a></li>
+        <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+        <li><button class="langbtn" onclick="toggleLang()"><span class="lang-en">한국어</span><span class="lang-ko">ENG</span></button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="eyebrow"><span class="lang-en">Projects</span><span class="lang-ko">프로젝트</span></div>
+    <h2 class="sec"><span class="lang-en">Selected Projects</span><span class="lang-ko">주요 프로젝트</span></h2>
+    <p class="lead"><span class="lang-en">Applied projects with companies and public institutions. Placeholder cards — add your own images (proj1.jpg, proj2.jpg, …) and descriptions.</span><span class="lang-ko">기업·공공기관과 수행한 응용 프로젝트입니다. 자리표시자 카드예요 — 사진(proj1.jpg, proj2.jpg, …)과 설명을 채워 넣으세요.</span></p>
+    <div class="pgrid">
+      <div class="pcard">
+        <div class="pimg"><img src="proj1.jpg" alt="" onerror="this.style.display='none';this.parentElement.insertAdjacentText('beforeend','Add image as proj1.jpg')">
+        </div>
+        <div class="pbody">
+          <div class="ptag"><span class="lang-en">Apple Korea · 2025–26</span><span class="lang-ko">Apple Korea · 2025–26</span></div>
+          <h3><span class="lang-en">CRM Insight Tool (CIT)</span><span class="lang-ko">CRM 인사이트 툴 (CIT)</span></h3>
+          <p><span class="lang-en">Development and maintenance of a CRM insight tool that turns customer data into actionable insight.</span><span class="lang-ko">고객 데이터를 실행 가능한 인사이트로 전환하는 CRM 인사이트 툴(CIT)의 개발 및 유지보수.</span></p>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pimg"><img src="proj2.jpg" alt="" onerror="this.style.display='none';this.parentElement.insertAdjacentText('beforeend','Add image as proj2.jpg')">
+        </div>
+        <div class="pbody">
+          <div class="ptag"><span class="lang-en">NRF · 2025</span><span class="lang-ko">NRF · 2025</span></div>
+          <h3><span class="lang-en">AI LLM Career Recommendation</span><span class="lang-ko">AI LLM 기반 진로 추천 시스템</span></h3>
+          <p><span class="lang-en">An AI/LLM-based career recommendation and student portfolio design system (chatbot) for the biohealth field.</span><span class="lang-ko">바이오헬스 분야를 위한 AI·LLM 기반 진로 추천 및 학생 포트폴리오 설계 시스템(챗봇) 개발.</span></p>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pimg"><img src="proj3.jpg" alt="" onerror="this.style.display='none';this.parentElement.insertAdjacentText('beforeend','Add image as proj3.jpg')">
+        </div>
+        <div class="pbody">
+          <div class="ptag"><span class="lang-en">LG Uplus · 2021–22</span><span class="lang-ko">LG유플러스 · 2021–22</span></div>
+          <h3><span class="lang-en">Service Quality from Customer Big Data</span><span class="lang-ko">고객 빅데이터 기반 서비스 품질 분석</span></h3>
+          <p><span class="lang-en">Analysis of service quality based on large-scale customer data, including an IPTV service quality measurement model.</span><span class="lang-ko">대규모 고객 데이터를 기반으로 한 서비스 품질 분석 및 IPTV 서비스 품질 측정 모델 개발.</span></p>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pimg"><img src="proj4.jpg" alt="" onerror="this.style.display='none';this.parentElement.insertAdjacentText('beforeend','Add image as proj4.jpg')">
+        </div>
+        <div class="pbody">
+          <div class="ptag"><span class="lang-en">Add your project</span><span class="lang-ko">프로젝트 추가</span></div>
+          <h3><span class="lang-en">Project Title</span><span class="lang-ko">프로젝트 제목</span></h3>
+          <p><span class="lang-en">Add a short description of the project here — what it was, your role, and the outcome.</span><span class="lang-ko">프로젝트에 대한 간단한 설명을 여기에 적으세요 — 무엇을, 어떤 역할로, 어떤 성과를 냈는지.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> Operations &amp; Experience Lab · Hongik University. <span class="lang-en">Hongik University, College of Business Administration.</span><span class="lang-ko">홍익대학교 경영대학.</span></div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
