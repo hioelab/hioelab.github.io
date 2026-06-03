@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<section id="post">
+  <div class="wrap" style="max-width:780px">
+    <a class="backlink" href="{{ '/blog.html' | relative_url }}">← <span class="lang-en">Back to Blog</span><span class="lang-ko">블로그 목록으로</span></a>
+    <h1 class="postt">
+      <span class="lang-en">{{ page.title }}</span>
+      <span class="lang-ko">{{ page.title_ko | default: page.title }}</span>
+    </h1>
+    <div class="postdate">{{ page.date | date: "%Y.%m.%d" }}</div>
+    <div class="postbody">
+      {{ content }}
+    </div>
+  </div>
+</section>

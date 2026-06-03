@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+<title>{{ page.title | default: 'Operations & Experience Lab' }} · Operations & Experience Lab</title>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="{{ '/index.html' | relative_url }}"><span class="dot"></span><span>Operations &amp; Experience Lab</span></a>
+    <nav>
+      <ul>
+        <li><a href="{{ '/index.html' | relative_url }}" data-page="index.html">Home</a></li>
+        <li><a href="{{ '/professor.html' | relative_url }}" data-page="professor.html">Professor</a></li>
+        <li><a href="{{ '/members.html' | relative_url }}" data-page="members.html">Members</a></li>
+        <li><a href="{{ '/research.html' | relative_url }}" data-page="research.html">Research</a></li>
+        <li><a href="{{ '/projects.html' | relative_url }}" data-page="projects.html">Projects</a></li>
+        <li><a href="{{ '/publications.html' | relative_url }}" data-page="publications.html">Publications</a></li>
+        <li><a href="{{ '/news.html' | relative_url }}" data-page="news.html">News</a></li>
+        <li><a href="{{ '/blog.html' | relative_url }}" data-page="blog.html">Blog</a></li>
+        <li><a href="{{ '/contact.html' | relative_url }}" data-page="contact.html">Contact</a></li>
+        <li><button class="langbtn" onclick="toggleLang()"><span class="lang-en">한국어</span><span class="lang-ko">ENG</span></button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+{{ content }}
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> Operations &amp; Experience Lab · Hongik University. <span class="lang-en">Hongik University, College of Business Administration.</span><span class="lang-ko">홍익대학교 경영대학.</span></div>
+</footer>
+
+<script src="{{ '/app.js' | relative_url }}"></script>
+</body>
+</html>

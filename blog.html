@@ -1,0 +1,22 @@
+---
+layout: default
+title: Blog
+---
+<section id="blog">
+  <div class="wrap">
+    <div class="eyebrow"><span class="lang-en">Blog</span><span class="lang-ko">블로그</span></div>
+    <h2 class="sec"><span class="lang-en">Notes &amp; Updates</span><span class="lang-ko">노트 &amp; 소식</span></h2>
+    <p class="lead"><span class="lang-en">Research notes, project updates, and ideas from the lab.</span><span class="lang-ko">연구 노트, 프로젝트 업데이트, 그리고 연구실의 생각들.</span></p>
+    <div class="bloglist">
+      {% for post in site.posts %}
+      <a class="blogitem" href="{{ post.url | relative_url }}">
+        <div class="bdate">{{ post.date | date: "%Y.%m.%d" }}</div>
+        <h3><span class="lang-en">{{ post.title }}</span><span class="lang-ko">{{ post.title_ko | default: post.title }}</span></h3>
+        {% if post.excerpt_en or post.excerpt_ko %}
+        <p><span class="lang-en">{{ post.excerpt_en }}</span><span class="lang-ko">{{ post.excerpt_ko | default: post.excerpt_en }}</span></p>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -9,8 +9,10 @@
   };
   var path=(location.pathname.split('/').pop()||'index.html').toLowerCase();
   if(path==='') path='index.html';
+  var isBlog = (path==='blog.html') || (location.pathname.indexOf('/blog/')>-1);
   document.querySelectorAll('nav a[data-page]').forEach(function(a){
-    if(a.getAttribute('data-page')===path) a.classList.add('active');
+    var dp=a.getAttribute('data-page');
+    if(dp===path || (isBlog && dp==='blog.html')) a.classList.add('active');
   });
   var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
 })();

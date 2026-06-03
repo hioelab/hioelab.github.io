@@ -151,3 +151,24 @@
   .pcard p{font-size:14.5px;color:#555;text-align:justify;word-break:keep-all}
 
   nav a.active{color:var(--accent)}
+
+/* Blog */
+.bloglist{display:grid;gap:0;margin-top:8px}
+.blogitem{display:block;padding:24px 4px;border-top:1px solid var(--line);transition:.15s;color:inherit}
+.blogitem:last-child{border-bottom:1px solid var(--line)}
+.blogitem:hover{padding-left:12px;background:#fafafa}
+.blogitem .bdate{font-size:13px;color:var(--accent);font-weight:700}
+.blogitem h3{font-size:21px;font-weight:800;margin:6px 0 6px;letter-spacing:-.01em}
+.blogitem p{font-size:15px;color:#555;text-align:justify;word-break:keep-all}
+#post .backlink{display:inline-block;margin-bottom:24px;font-weight:700;color:var(--muted)}
+#post .backlink:hover{color:var(--accent)}
+#post .postt{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.12}
+#post .postdate{color:var(--accent);font-weight:700;margin:10px 0 30px}
+#post .postbody{font-size:16.5px;line-height:1.75;color:#222}
+#post .postbody h2{font-size:24px;font-weight:800;margin:32px 0 12px;letter-spacing:-.01em}
+#post .postbody h3{font-size:19px;font-weight:800;margin:24px 0 10px}
+#post .postbody p{margin-bottom:16px;text-align:justify;word-break:keep-all}
+#post .postbody ul,#post .postbody ol{margin:0 0 16px 22px}
+#post .postbody li{margin-bottom:6px}
+#post .postbody img{max-width:100%;border-radius:10px;margin:14px 0}
+#post .postbody a{color:var(--accent2);border-bottom:1px solid var(--accent2)}
