@@ -15,4 +15,27 @@
     if(dp===path || (isBlog && dp==='blog.html')) a.classList.add('active');
   });
   var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
+
+  // Click-to-zoom lightbox for post images inside .diagram-box
+  var overlay=null;
+  function closeLightbox(){
+    if(overlay){ overlay.remove(); overlay=null; }
+  }
+  function openLightbox(src, alt){
+    closeLightbox();
+    overlay=document.createElement('div');
+    overlay.className='img-lightbox';
+    var img=document.createElement('img');
+    img.src=src; img.alt=alt||'';
+    overlay.appendChild(img);
+    overlay.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', function esc(e){ if(e.key==='Escape'){ closeLightbox(); document.removeEventListener('keydown', esc); } });
+    document.body.appendChild(overlay);
+  }
+  document.querySelectorAll('.diagram-box img').forEach(function(img){
+    img.classList.add('zoomable');
+    img.addEventListener('click', function(){
+      if(overlay){ closeLightbox(); } else { openLightbox(img.src, img.alt); }
+    });
+  });
 })();

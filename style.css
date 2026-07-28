@@ -202,8 +202,7 @@
 #post .postbody p.caption{font-size:12.5px;color:var(--muted);margin-top:-8px;margin-bottom:24px;text-align:left}
 
 /* Post body — system boxes (matches site's card language: light border, subtle hover lift) */
-#post .postbody .sysbox{border:1px solid var(--line);border-radius:16px;background:#fafafa;padding:24px 26px;margin:18px 0;transition:.18s}
-#post .postbody .sysbox:hover{border-color:var(--ink);box-shadow:0 14px 30px rgba(0,0,0,.05)}
+#post .postbody .sysbox{border:1px solid var(--line);border-radius:16px;background:#fafafa;padding:24px 26px;margin:18px 0}
 #post .postbody .sysbox p{margin-bottom:12px}
 #post .postbody .sysbox p:last-child{margin-bottom:0}
 #post .postbody .sysbox p:first-child{display:flex;align-items:center;gap:12px;margin-bottom:14px}
@@ -214,7 +213,13 @@
 #post .postbody .diagram-box{border:1px solid var(--line);border-radius:16px;background:#fafafa;padding:26px;margin:24px 0;text-align:center;transition:.18s}
 #post .postbody .diagram-box:hover{border-color:var(--ink);box-shadow:0 14px 30px rgba(0,0,0,.05)}
 #post .postbody .diagram-box img{display:block;margin:0 auto;max-width:100%}
+#post .postbody .diagram-box img.zoomable{cursor:zoom-in}
 #post .postbody .diagram-box p.caption{margin:14px 0 0;text-align:center}
+
+/* Lightbox overlay for zoomed images */
+.img-lightbox{position:fixed;inset:0;background:rgba(10,10,10,.86);display:flex;align-items:center;justify-content:center;z-index:9999;padding:40px;cursor:zoom-out;animation:lightbox-in .15s ease}
+.img-lightbox img{max-width:92vw;max-height:88vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+@keyframes lightbox-in{from{opacity:0}to{opacity:1}}
 
 /* Post body — link (bookmark) card */
 #post .postbody a.linkcard{display:flex;border:1px solid var(--line);border-radius:16px;overflow:hidden;margin:30px 0;color:inherit;transition:.18s;text-decoration:none}
