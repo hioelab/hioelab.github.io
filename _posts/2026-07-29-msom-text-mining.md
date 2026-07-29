@@ -4,8 +4,8 @@ title: "Can We Measure Service Quality from Review Text, Not Star Ratings?"
 title_ko: "별점이 아닌 리뷰 텍스트로 서비스 품질을 잴 수 있을까?"
 date: 2026-07-29
 category: blog
-excerpt_en: "Mejia et al. (2020) · Service Quality Using Text Mining: Measurement and Consequences · MSOM"
-excerpt_ko: "Mejia et al. (2020) · Service Quality Using Text Mining: Measurement and Consequences · MSOM"
+excerpt_en: "Mejia et al. (2020) · MSOM"
+excerpt_ko: "Mejia et al. (2020) · MSOM"
 ---
 
 <div class="lang-en" markdown="1">
