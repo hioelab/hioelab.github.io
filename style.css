@@ -167,9 +167,20 @@
 #post .postdate{color:var(--accent);font-weight:700;margin:10px 0 30px}
 #post .postbody{font-size:16.5px;line-height:1.75;color:#222}
 #post .postbody h2{font-size:24px;font-weight:800;margin:32px 0 12px;letter-spacing:-.01em}
+#post .postbody h2.article-title{font-size:27px;text-align:left;margin:40px 0 20px}
 #post .postbody h3{font-size:19px;font-weight:800;margin:24px 0 10px}
+
+/* Post body — math formulas (rendered client-side by KaTeX) */
+#post .postbody .formula{margin:20px 0;text-align:center;overflow-x:auto}
+#post .postbody .formula .katex{font-size:1.5em}
+
+/* Post body — inline math mentions (same math typeface as the formula blocks, via KaTeX's own fonts) */
+#post .postbody .mvar{font-family:"KaTeX_Math","KaTeX_Main",Georgia,serif;font-style:italic}
 #post .postbody p{margin-bottom:16px;text-align:justify;word-break:keep-all}
 #post .postbody ul,#post .postbody ol{margin:0 0 16px 22px}
+#post .postbody ul.reflist{color:var(--muted);font-size:15px}
+#post .postbody ul.reflist li{margin-bottom:10px}
+#post .postbody ul.reflist a{font-weight:600}
 #post .postbody li{margin-bottom:6px}
 #post .postbody img{max-width:100%;border-radius:10px;margin:14px 0}
 #post .postbody a{color:var(--accent2);border-bottom:1px solid var(--accent2)}
@@ -225,7 +236,7 @@
 #post .postbody a.linkcard{display:flex;border:1px solid var(--line);border-radius:16px;overflow:hidden;margin:30px 0;color:inherit;transition:.18s;text-decoration:none}
 #post .postbody a.linkcard:hover{border-color:var(--ink);transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.07)}
 #post .postbody a.linkcard .lc-main{display:flex;flex-direction:column;flex:1;padding:22px 24px;min-width:0}
-#post .postbody a.linkcard .lc-title{display:block;font-weight:800;font-size:15px;color:var(--ink);margin-bottom:6px}
+#post .postbody a.linkcard .lc-title{display:block;font-weight:800;font-size:15px;color:var(--ink);margin-bottom:6px;text-align:left}
 #post .postbody a.linkcard .lc-desc{display:block;font-size:13.5px;color:#555;margin-bottom:12px;text-align:left}
 #post .postbody a.linkcard .lc-url{display:block;font-size:12.5px;color:var(--accent2);font-weight:700}
 #post .postbody a.linkcard .lc-side{display:flex;width:170px;flex-shrink:0;background:var(--accent2);color:#fff;align-items:center;justify-content:center;padding:18px;font-weight:800;font-size:13.5px;text-align:center;line-height:1.4}
