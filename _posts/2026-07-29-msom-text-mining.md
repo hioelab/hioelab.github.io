@@ -57,7 +57,7 @@ The first is an Amazon MTurk (a platform for recruiting people online to do simp
 
 ![MTurk 실험의 2x2 설계](/assets/img/msom-fig2-mturk-design.png)
 
-*Figure 2. The MTurk experiment's 2×2 design. Star rating is included as a second axis specifically to isolate the effect of the text alone. If people classify a low-rated review correctly based on its text, that means they judged from the writing itself, not the star rating.*
+*Figure 2. The MTurk experiment's 2×2 design.*
 {: .caption}
 
 </div>
@@ -185,7 +185,7 @@ For readers who want to dig further into the terms and sources mentioned in this
 
 ![MTurk 실험의 2x2 설계](/assets/img/msom-fig2-mturk-design.png)
 
-*그림 2. MTurk 실험의 2×2 설계. 별점을 두 번째 축으로 둔 이유는 텍스트만의 효과를 가려내기 위해서다. 별점이 낮은데도 사람들이 텍스트를 보고 제대로 분류한다면, 그건 별점이 아니라 글 자체를 읽고 판단했다는 뜻이 된다.*
+*그림 2. MTurk 실험의 2×2 설계.*
 {: .caption}
 
 </div>
