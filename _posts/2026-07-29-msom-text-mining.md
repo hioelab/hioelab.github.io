@@ -6,6 +6,10 @@ date: 2026-07-29
 category: blog
 excerpt_en: "Mejia et al. (2020) · MSOM"
 excerpt_ko: "Mejia et al. (2020) · MSOM"
+contributor: "Hyunyul Moon"
+contributor_ko: "문현율"
+editor: "Jiyoung Song"
+editor_ko: "송지영"
 ---
 
 <div class="lang-en" markdown="1">
@@ -129,11 +133,6 @@ For readers who want to dig further into the terms and sources mentioned in this
 
 **Zagat** — the industry-standard rating used as the comparison point in this piece. It's a leading US crowdsourced restaurant-rating publication in which a local food-critic editor compiles anonymous volunteers' surveys and scores food, décor, and service out of 30 points each. During the 2005–2013 period this paper covers, it existed only in book form.
 
-<div class="contrib">
-  <div class="cr"><span class="cr-badge">Contributor</span><span class="cr-name">Hyunyul Moon</span></div>
-  <div class="cr"><span class="cr-badge editor">Editor</span><span class="cr-name">Jiyoung Song</span></div>
-</div>
-
 </div>
 
 <div class="block lang-ko" markdown="1">
@@ -256,10 +255,5 @@ CEM은 별점·리뷰 수·가격대·요리 종류 같은 값들을 몇 개 구
 > [doi.org/10.1093/pan/mpr013](https://doi.org/10.1093/pan/mpr013)
 
 **Zagat** — 이 글에서 비교 상대로 쓰인 업계 표준 평가. 익명 자원자들의 설문을 지역 음식 평론가인 편집자가 취합해 음식·인테리어·서비스 세 항목에 30점 만점으로 점수를 매기는, 미국의 대표적인 크라우드소싱 기반 레스토랑 평가 매체다. 논문이 다룬 2005~2013년에는 책 형태로만 나왔다.
-
-<div class="contrib">
-  <div class="cr"><span class="cr-badge">Contributor</span><span class="cr-name">문현율</span></div>
-  <div class="cr"><span class="cr-badge editor">Editor</span><span class="cr-name">송지영</span></div>
-</div>
 
 </div>

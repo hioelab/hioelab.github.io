@@ -6,6 +6,10 @@ date: 2026-07-29
 category: blog
 excerpt_en: "Qiu et al. (2025) · Marketing Science  |  Kravitz (2025) · Consumer Reports"
 excerpt_ko: "Qiu et al. (2025) · Marketing Science  |  Kravitz (2025) · Consumer Reports"
+contributor: "Suwon Kim"
+contributor_ko: "김수원"
+editor: "Jiyoung Song"
+editor_ko: "송지영"
 ---
 
 <div class="lang-en" markdown="1">
@@ -141,11 +145,6 @@ This investigation connects to the concern the Qiu et al. paper covered above ra
 
 Instacart has stated that this pricing experiment used no individual demographic or personal data, and only randomly tested prices at the product level. If true, that means the current price differences are not, at minimum, personalized discrimination along the lines of "charge the wealthy more." Consumer Reports likewise found no evidence during its investigation that personal data was actually reflected in prices. Still, patent filings from Instacart describe technology for pricing based on personal data — so while this isn't happening now, the possibility that it could head in that direction later remains open.
 
-<div class="contrib">
-  <div class="cr"><span class="cr-badge">Contributor</span><span class="cr-name">Suwon Kim</span></div>
-  <div class="cr"><span class="cr-badge editor">Editor</span><span class="cr-name">Jiyoung Song</span></div>
-</div>
-
 </div>
 
 <div class="block lang-ko" markdown="1">
@@ -280,10 +279,5 @@ AI에게 가격 결정을 맡기면, 판매자들끼리 서로 짜지 않았는�
 이 조사는 앞서 다룬 Qiu 외 논문이 시뮬레이션으로 그려낸 우려와 맞닿아 있다. 다만 메커니즘은 다르다. Qiu 외 논문은 가격 차별 없이 랭킹 하나만으로 가격이 오르는 경우를 다뤘다면 이 조사는 소비자마다 아예 다른 가격을 매기는 더 직접적인 사례다. 개인화가 정교해질수록 소비자가 손해 볼 여지도 커진다는 경고는 두 사례 모두에서 공통적이다.
 
 인스타카트는 이번 가격 실험에 개인의 인구통계나 데이터를 쓰지 않았고 상품별로만 가격을 무작위로 테스트했다고 밝혔다. 이것이 사실이라면 지금의 가격 차이는 최소한 "누구는 부자니까 비싸게 받자"는 식의 개인 맞춤형 차별은 아니라는 뜻이 된다. 컨슈머 리포트도 조사 과정에서 개인 데이터가 실제로 가격에 반영됐다는 정황은 찾지 못했다. 다만 인스타카트가 출원한 특허 문서에는 개인 데이터를 활용해 가격을 책정하는 기술이 설명되어 있어서 지금 당장은 아니어도 앞으로 이런 방식으로 이어질 가능성은 남아 있다.
-
-<div class="contrib">
-  <div class="cr"><span class="cr-badge">Contributor</span><span class="cr-name">김수원</span></div>
-  <div class="cr"><span class="cr-badge editor">Editor</span><span class="cr-name">송지영</span></div>
-</div>
 
 </div>
