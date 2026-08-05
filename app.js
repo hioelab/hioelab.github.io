@@ -43,14 +43,28 @@
   var vc = document.querySelector('.viewcount[data-slug]');
   if (vc) {
     var slug = vc.getAttribute('data-slug') || 'post';
-    fetch('https://api.counterapi.dev/v1/hioelab-blog/' + slug + '/up')
+    var cacheKey = 'oxlab-vc-' + slug;
+
+    // Show last-known count instantly (no network wait) while a fresh count loads in the background
+    try {
+      var cached = localStorage.getItem(cacheKey);
+      if (cached) vc.querySelectorAll('.vc-count').forEach(function(el){ el.textContent = cached; });
+    } catch(e){}
+
+    // Abort the request if it hangs, so the counter never blocks the page
+    var ctrl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+    var timeout = setTimeout(function(){ if (ctrl) ctrl.abort(); }, 4000);
+
+    fetch('https://api.counterapi.dev/v1/hioelab-blog/' + slug + '/up', ctrl ? { signal: ctrl.signal } : {})
       .then(function(r){ return r.json(); })
       .then(function(d){
+        clearTimeout(timeout);
         if (d && typeof d.count === 'number') {
           var n = d.count.toLocaleString();
           vc.querySelectorAll('.vc-count').forEach(function(el){ el.textContent = n; });
+          try { localStorage.setItem(cacheKey, n); } catch(e){}
         }
       })
-      .catch(function(){ vc.style.display = 'none'; });
+      .catch(function(){ clearTimeout(timeout); if (!cached) vc.style.display = 'none'; });
   }
 })();
