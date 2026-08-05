@@ -39,7 +39,7 @@
     });
   });
 
-  // Blog post view counter (counterapi.dev, no signup required)
+  // Blog post view counter (abacus.jasoncameron.dev, no signup required, Deno Deploy edge network — faster than the old provider)
   var vc = document.querySelector('.viewcount[data-slug]');
   if (vc) {
     var slug = vc.getAttribute('data-slug') || 'post';
@@ -55,12 +55,12 @@
     var ctrl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
     var timeout = setTimeout(function(){ if (ctrl) ctrl.abort(); }, 4000);
 
-    fetch('https://api.counterapi.dev/v1/hioelab-blog/' + slug + '/up', ctrl ? { signal: ctrl.signal } : {})
+    fetch('https://abacus.jasoncameron.dev/hit/hioelab-blog/' + slug, ctrl ? { signal: ctrl.signal } : {})
       .then(function(r){ return r.json(); })
       .then(function(d){
         clearTimeout(timeout);
-        if (d && typeof d.count === 'number') {
-          var n = d.count.toLocaleString();
+        if (d && typeof d.value === 'number') {
+          var n = d.value.toLocaleString();
           vc.querySelectorAll('.vc-count').forEach(function(el){ el.textContent = n; });
           try { localStorage.setItem(cacheKey, n); } catch(e){}
         }
