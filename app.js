@@ -39,32 +39,36 @@
     });
   });
 
-  // Blog post view counter (abacus.jasoncameron.dev, no signup required, Deno Deploy edge network — faster than the old provider)
+  // Blog post view counter (abacus.jasoncameron.dev, no signup required)
+  // Display is never blocked on the network: we show the last-known count from
+  // localStorage instantly, and only ever wait on the network the very first
+  // time a given browser opens the post. The hit itself is still recorded
+  // every visit in the background.
   var vc = document.querySelector('.viewcount[data-slug]');
   if (vc) {
     var slug = vc.getAttribute('data-slug') || 'post';
     var cacheKey = 'oxlab-vc-' + slug;
+    var cached = null;
+    try { cached = localStorage.getItem(cacheKey); } catch(e){}
 
-    // Show last-known count instantly (no network wait) while a fresh count loads in the background
-    try {
-      var cached = localStorage.getItem(cacheKey);
-      if (cached) vc.querySelectorAll('.vc-count').forEach(function(el){ el.textContent = cached; });
-    } catch(e){}
+    if (cached) {
+      vc.querySelectorAll('.vc-count').forEach(function(el){ el.textContent = cached; });
+    } else {
+      vc.style.visibility = 'hidden'; // avoid flashing a "–" placeholder
+    }
 
-    // Abort the request if it hangs, so the counter never blocks the page
-    var ctrl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
-    var timeout = setTimeout(function(){ if (ctrl) ctrl.abort(); }, 4000);
-
-    fetch('https://abacus.jasoncameron.dev/hit/hioelab-blog/' + slug, ctrl ? { signal: ctrl.signal } : {})
+    fetch('https://abacus.jasoncameron.dev/hit/hioelab-blog/' + slug, { keepalive: true })
       .then(function(r){ return r.json(); })
       .then(function(d){
-        clearTimeout(timeout);
         if (d && typeof d.value === 'number') {
           var n = d.value.toLocaleString();
-          vc.querySelectorAll('.vc-count').forEach(function(el){ el.textContent = n; });
           try { localStorage.setItem(cacheKey, n); } catch(e){}
+          if (!cached) {
+            vc.querySelectorAll('.vc-count').forEach(function(el){ el.textContent = n; });
+            vc.style.visibility = 'visible';
+          }
         }
       })
-      .catch(function(){ clearTimeout(timeout); if (!cached) vc.style.display = 'none'; });
+      .catch(function(){ if (!cached) vc.style.display = 'none'; });
   }
 })();
