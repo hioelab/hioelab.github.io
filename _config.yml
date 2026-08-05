@@ -1,5 +1,6 @@
 title: Operations & Experience Lab
 description: Hongik University — Operations & Experience Lab
+url: "https://hioelab.github.io"
 # 사이트가 https://hioelab.github.io 처럼 "루트"에 올라가면 아래는 빈 칸 그대로 두세요.
 # 만약 저장소 이름이 hioelab.github.io 가 아니라면(예: github.io-),
 # baseurl 을 "/저장소이름" 으로 바꾸세요. 예: baseurl: "/github.io-"

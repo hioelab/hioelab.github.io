@@ -164,7 +164,14 @@
 #post .backlink{display:inline-block;margin-bottom:24px;font-weight:700;color:var(--muted)}
 #post .backlink:hover{color:var(--accent)}
 #post .postt{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.12}
-#post .postdate{color:var(--accent);font-weight:700;margin:10px 0 30px}
+#post .postdate{color:var(--accent);font-weight:700;margin:10px 0 12px}
+#post .postdate .viewcount{color:var(--muted);font-weight:600;font-size:15px}
+#post .postmeta{display:flex;flex-wrap:wrap;gap:4px;font-size:15px;margin:0 0 30px;text-align:left}
+#post .postmeta .cr-chip{display:inline-flex;align-items:baseline;gap:4px}
+#post .postmeta .cr-chip .cr-role{font-size:14px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#d03a2b}
+#post .postmeta .cr-chip.cr-editor .cr-role{color:#d03a2b}
+#post .postmeta .cr-chip .cr-name{font-weight:600;color:var(--ink)}
+#post .postmeta .cr-sep{color:var(--ink)}
 #post .postbody{font-size:16.5px;line-height:1.75;color:#222}
 #post .postbody h2{font-size:24px;font-weight:800;margin:32px 0 12px;letter-spacing:-.01em}
 #post .postbody h2.article-title{font-size:27px;text-align:left;margin:40px 0 20px}

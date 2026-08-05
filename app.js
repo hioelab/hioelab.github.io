@@ -38,4 +38,19 @@
       if(overlay){ closeLightbox(); } else { openLightbox(img.src, img.alt); }
     });
   });
+
+  // Blog post view counter (counterapi.dev, no signup required)
+  var vc = document.querySelector('.viewcount[data-slug]');
+  if (vc) {
+    var slug = vc.getAttribute('data-slug') || 'post';
+    fetch('https://api.counterapi.dev/v1/hioelab-blog/' + slug + '/up')
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        if (d && typeof d.count === 'number') {
+          var n = d.count.toLocaleString();
+          vc.querySelectorAll('.vc-count').forEach(function(el){ el.textContent = n; });
+        }
+      })
+      .catch(function(){ vc.style.display = 'none'; });
+  }
 })();
