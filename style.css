@@ -228,7 +228,7 @@
 #post .postbody .sysbox .sysnum{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;flex-shrink:0;border-radius:50%;background:var(--accent2);color:#fff;font-weight:800;font-size:13px}
 
 /* Post body — diagram card (image + caption centered, framed like the system boxes) */
-#post .postbody .diagram-box{border:1px solid var(--line);border-radius:16px;background:#fafafa;padding:26px;margin:24px 0;text-align:center;transition:.18s}
+#post .postbody .diagram-box{border:1px solid var(--line);border-radius:16px;background:#fff;padding:10px;margin:24px 0;text-align:center;transition:.18s}
 #post .postbody .diagram-box:hover{border-color:var(--ink);box-shadow:0 14px 30px rgba(0,0,0,.05)}
 #post .postbody .diagram-box img{display:block;margin:0 auto;max-width:100%}
 #post .postbody .diagram-box img.zoomable{cursor:zoom-in}
