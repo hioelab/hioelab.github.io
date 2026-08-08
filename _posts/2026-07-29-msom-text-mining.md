@@ -38,9 +38,9 @@ First, it should look that way to a human. If a computer classifies a review as 
 
 <div class="diagram-box" markdown="1">
 
-![논문의 검증 구조](/assets/img/msom-fig1-verification.png)
+![The paper's verification structure](/assets/img/msom-fig1-verification-en.png)
 
-*Figure 1. The paper's verification structure. Three different methods confirm whether the five dimensions extracted from text are genuinely "service quality."*
+*Figure 1. The paper's verification structure.<br>Three different methods confirm whether the five dimensions extracted from text are genuinely "service quality."*
 {: .caption}
 
 </div>
@@ -59,7 +59,7 @@ The first is an Amazon MTurk (a platform for recruiting people online to do simp
 
 <div class="diagram-box" markdown="1">
 
-![MTurk 실험의 2x2 설계](/assets/img/msom-fig2-mturk-design.png)
+![The MTurk experiment's 2×2 design](/assets/img/msom-fig2-mturk-design-en.png)
 
 *Figure 2. The MTurk experiment's 2×2 design.*
 {: .caption}
@@ -90,7 +90,7 @@ What stands out here is that these text dimensions swayed closure more than the 
 
 <div class="diagram-box" markdown="1">
 
-![5개 차원이 세 조건을 각각 통과했는지 정리한 표](/assets/img/msom-fig3-dimension-summary.png)
+![A table summarizing whether each of the five dimensions passed each of the three verification conditions](/assets/img/msom-fig3-dimension-summary-en.png)
 
 *Figure 3. A table summarizing whether each of the five dimensions passed each of the three verification conditions.*
 {: .caption}
@@ -199,15 +199,15 @@ CEM은 별점·리뷰 수·가격대·요리 종류 같은 값들을 몇 개 구
 
 통계를 요약하면, 매칭을 거쳐 남은 건 폐업 446곳과 영업 605곳이다. 영업 중인 후보는 2,021곳이었는데 그중 셋에 하나 정도만 짝으로 뽑혔다. 나머지는 폐업한 식당과 같은 칸에 들어가는 곳이 없어서 빠졌다. 두 집단은 평균 별점(3.26 대 3.31)이나 리뷰 수(54.8건 대 59.5건)가 비슷해서 매칭이 잘 됐다고 볼 수 있다. 최종 패널은 관측치 16,515개, 식당 1,035곳이다.
 
-첫 번째 조건, 사람이 봐도 그렇게 보이는가. 사람들은 전반적 품질·대기시간·응대성 세 차원에서 각각 93%, 90%, 85%의 정확도로 리뷰를 분류했다. 반반 확률로 찍었을 때보다 한참 높다. 그런데 여기엔 저자들이 솔직하게 적어둔 한계가 있다. 이 정확도는 그 차원 얘기가 뚜렷한 리뷰를 보여줬을 때고, 희미한 리뷰를 보여줬을 때는 정확도가 떨어졌다. 특히 대기시간은 아예 우연 수준과 구별되지 않았다.
+**첫 번째 조건, 사람이 봐도 그렇게 보이는가.** 사람들은 전반적 품질·대기시간·응대성 세 차원에서 각각 93%, 90%, 85%의 정확도로 리뷰를 분류했다. 반반 확률로 찍었을 때보다 한참 높다. 그런데 여기엔 저자들이 솔직하게 적어둔 한계가 있다. 이 정확도는 그 차원 얘기가 뚜렷한 리뷰를 보여줬을 때고, 희미한 리뷰를 보여줬을 때는 정확도가 떨어졌다. 특히 대기시간은 아예 우연 수준과 구별되지 않았다.
 
 정리하면 리뷰에서 "대기시간이 너무 길어서 별로였어요" 와 같이 명시적으로 담겨있지 않다면, 사람들은 분류를 하지 못한다. 저자들은 이것을 리뷰가 워낙 후한 쪽으로 쏠려 있는 탓으로 본다. 5점 만점에 평균이 4점을 넘다 보니 뚜렷하게 담긴 신호는 사람들이 예상하는 바와 맞아떨어져 알아보기 쉽지만, 희미하거나 애매한 텍스트는 무슨 뜻인지 잡아내기 어렵다는 것이다. 저자들은 이걸 한계로 남겨둔다.
 
 여기까지가 사람 쪽 이야기라면, 사람한테 물어보지도 못한 차원이 둘 있다. 음식 품질과 분위기다. 이 둘은 본 실험에 들어가지 못했는데, 대학생들을 대상으로 진행된 파일럿(예비 실험)에서 사람들이 두 차원을 구별하지 못했기 때문이다. 하지만 저자들이 진짜 원인으로 짚는 건 사람이 아니라 모델 쪽이다. NMF는 리뷰에서 5개 축을 뽑는데, 이 둘은 네 번째와 다섯 번째로 나온 축이라 신호가 약했다. 실제로 두 차원의 대표 단어를 보면 food, good 같은 게 전반적 품질 차원과 겹친다. 축 자체의 경계가 흐릿하다 보니 사람한테 보여줘도 갈라내기 어려웠던 것이다. 저자들은 그러면서, 음식 품질이나 분위기가 서비스 품질로서 중요하지 않다는 뜻은 아니라고 분명히 선을 긋는다.
 
-두 번째 조건, 기존 평가와 견줘도 일관되게 나오는가. Zagat 평가와 비교했을 때 시스템 전체의 R²가 0.65로 나왔다. 대응 관계도 꽤 깔끔하다. 전반적 품질은 Zagat의 세 항목 모두와 상관이 있었고 대기시간과 응대성은 Zagat의 서비스 항목과 이어졌다. 대기시간 쪽 계수가 음수(−2.99)로 나온 건 방법론에서 말한 그대로다. 대기시간이 리뷰에서 화제가 될수록 전문가가 매긴 서비스 점수는 낮았다. 그리고 음식 품질은 Zagat의 음식과, 분위기는 인테리어와 각각 대응됐다. 여기서 눈여겨볼 것은 MTurk 실험에서 떨어졌던 그 두 차원이 이번엔 제자리를 찾아간다는 점이다.
+**두 번째 조건, 기존 평가와 견줘도 일관되게 나오는가.** Zagat 평가와 비교했을 때 시스템 전체의 R²가 0.65로 나왔다. 대응 관계도 꽤 깔끔하다. 전반적 품질은 Zagat의 세 항목 모두와 상관이 있었고 대기시간과 응대성은 Zagat의 서비스 항목과 이어졌다. 대기시간 쪽 계수가 음수(−2.99)로 나온 건 방법론에서 말한 그대로다. 대기시간이 리뷰에서 화제가 될수록 전문가가 매긴 서비스 점수는 낮았다. 그리고 음식 품질은 Zagat의 음식과, 분위기는 인테리어와 각각 대응됐다. 여기서 눈여겨볼 것은 MTurk 실험에서 떨어졌던 그 두 차원이 이번엔 제자리를 찾아간다는 점이다.
 
-세 번째 조건, 현실에서 실제로 그렇게 되는가. 생존 분석을 통해서는 텍스트 차원이 레스토랑의 폐업과 이어진다는 걸 보인다. 전반적 품질 차원이 높을수록 다음 분기에 문 닫을 확률이 낮았고(p<0.001 — 우연히 이런 결과가 나올 확률이 0.1%도 안 된다는 뜻이다. 네 개 모형에서 모두 그랬다), 대기시간 차원이 높을수록 폐업 확률이 높았다(p<0.01). 앞서 대기시간 하나로는 서비스의 한 면밖에 못 본다고 했는데 이 한 면만큼은 폐업까지 이어질 만큼 무겁다는 뜻이기도 하다. 응대성은 한계적으로만 유의했다.
+**세 번째 조건, 현실에서 실제로 그렇게 되는가.** 생존 분석을 통해서는 텍스트 차원이 레스토랑의 폐업과 이어진다는 걸 보인다. 전반적 품질 차원이 높을수록 다음 분기에 문 닫을 확률이 낮았고(p<0.001 — 우연히 이런 결과가 나올 확률이 0.1%도 안 된다는 뜻이다. 네 개 모형에서 모두 그랬다), 대기시간 차원이 높을수록 폐업 확률이 높았다(p<0.01). 앞서 대기시간 하나로는 서비스의 한 면밖에 못 본다고 했는데 이 한 면만큼은 폐업까지 이어질 만큼 무겁다는 뜻이기도 하다. 응대성은 한계적으로만 유의했다.
 
 여기서 눈에 띄는 건 이 텍스트 차원들이 평균 별점보다 폐업을 더 크게 좌우했다는 점이다. 변수를 모두 같은 척도로 맞춰서 넣었으니 크기를 직접 견줄 수 있는데, 별점보다 텍스트에 정보가 더 많다는 저자들의 주장을 데이터가 그대로 받쳐준 셈. 숫자 변수만 쓰던 기존 모형과 견주면 모형 적합도가 AIC 기준 16%, BIC 기준 10% 좋아졌고, 폐업을 맞히는 정확도는 70% 올라갔다. 반면 음식 품질과 분위기는 어느 모형에서도 유의하지 않았다.
 
