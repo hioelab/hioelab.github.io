@@ -183,6 +183,10 @@
 
 /* Post body — inline math mentions (same math typeface as the formula blocks, via KaTeX's own fonts) */
 #post .postbody .mvar{font-family:"KaTeX_Math","KaTeX_Main",Georgia,serif;font-style:italic}
+#post .postbody table{width:100%;border-collapse:collapse;margin:22px 0;font-size:15px}
+#post .postbody th,#post .postbody td{border:1px solid var(--line);padding:10px 16px;text-align:center;vertical-align:middle}
+#post .postbody thead th{background:#f7f7f8;font-weight:800}
+#post .postbody tbody tr:nth-child(even){background:#fbfbfc}
 #post .postbody p{margin-bottom:16px;text-align:justify;word-break:keep-all}
 #post .postbody ul,#post .postbody ol{margin:0 0 16px 22px}
 #post .postbody ul.reflist{color:var(--muted);font-size:15px}
