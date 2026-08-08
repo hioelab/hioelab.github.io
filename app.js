@@ -45,6 +45,7 @@
     var rmTop = rmodal.querySelector('.rmodal-top');
     var rmNum = rmodal.querySelector('.rmodal-num');
     var rmTitle = rmodal.querySelector('.rmodal-title');
+    var rmSubtitle = rmodal.querySelector('.rmodal-subtitle');
     var rmBody = rmodal.querySelector('.rmodal-body');
     var rmClose = rmodal.querySelector('.rmodal-close');
     var lastFocused = null;
@@ -52,9 +53,11 @@
     function openRModal(card){
       var num = card.getAttribute('data-rcard') || '';
       var h3 = card.querySelector('h3');
+      var enSpan = h3 ? h3.querySelector('.lang-en') : null;
       var tpl = card.querySelector('template');
       rmNum.textContent = num;
       rmTitle.innerHTML = h3 ? h3.innerHTML : '';
+      rmSubtitle.textContent = enSpan ? enSpan.textContent : '';
       rmBody.innerHTML = tpl ? tpl.innerHTML : '';
       lastFocused = document.activeElement;
       rmodal.classList.add('open');

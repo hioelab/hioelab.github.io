@@ -102,7 +102,11 @@
   .rmodal-close{position:absolute;top:16px;right:18px;border:none;background:none;font-size:26px;line-height:1;color:var(--muted);cursor:pointer;padding:6px}
   .rmodal-close:hover{color:var(--ink)}
   .rmodal-num{font-size:13px;font-weight:800;color:var(--accent);letter-spacing:.1em;margin-top:8px}
-  .rmodal-title{font-size:26px;font-weight:800;margin:10px 0 18px;letter-spacing:-.01em}
+  .rmodal-title-row{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px;margin:10px 0 18px}
+  .rmodal-title{font-size:26px;font-weight:800;letter-spacing:-.01em;margin:0}
+  .rmodal-subtitle{font-size:14px;font-weight:600;color:var(--muted)}
+  body.ko .rmodal-subtitle{display:inline}
+  body:not(.ko) .rmodal-subtitle{display:none}
   .rmodal-body{font-size:16px;color:#444;line-height:1.75;text-align:justify;word-break:keep-all}
 
   /* Publications */
