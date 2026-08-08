@@ -39,6 +39,43 @@
     });
   });
 
+  // Research card detail modal
+  var rmodal = document.getElementById('rmodal');
+  if (rmodal) {
+    var rmTop = rmodal.querySelector('.rmodal-top');
+    var rmNum = rmodal.querySelector('.rmodal-num');
+    var rmTitle = rmodal.querySelector('.rmodal-title');
+    var rmBody = rmodal.querySelector('.rmodal-body');
+    var rmClose = rmodal.querySelector('.rmodal-close');
+    var lastFocused = null;
+
+    function openRModal(card){
+      var num = card.getAttribute('data-rcard') || '';
+      var h3 = card.querySelector('h3');
+      var tpl = card.querySelector('template');
+      rmNum.textContent = num;
+      rmTitle.innerHTML = h3 ? h3.innerHTML : '';
+      rmBody.innerHTML = tpl ? tpl.innerHTML : '';
+      lastFocused = document.activeElement;
+      rmodal.classList.add('open');
+      rmodal.setAttribute('aria-hidden', 'false');
+      rmClose.focus();
+    }
+    function closeRModal(){
+      rmodal.classList.remove('open');
+      rmodal.setAttribute('aria-hidden', 'true');
+      if (lastFocused) lastFocused.focus();
+    }
+    document.querySelectorAll('.rcard[data-rcard]').forEach(function(card){
+      card.addEventListener('click', function(){ openRModal(card); });
+    });
+    rmClose.addEventListener('click', closeRModal);
+    rmodal.addEventListener('click', function(e){ if (e.target === rmodal) closeRModal(); });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && rmodal.classList.contains('open')) closeRModal();
+    });
+  }
+
   // Blog post view counter (abacus.jasoncameron.dev, no signup required)
   // Display is never blocked on the network: we show the last-known count from
   // localStorage instantly, and only ever wait on the network the very first

@@ -83,11 +83,27 @@
 
   /* Research */
   .rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
-  .rcard{border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:.18s;background:#fff}
+  .rcard{border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:.18s;background:#fff;
+    display:block;width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer;-webkit-appearance:none}
   .rcard:hover{border-color:var(--ink);transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.06)}
+  .rcard:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
   .rcard .num{font-size:13px;font-weight:800;color:var(--accent);letter-spacing:.1em}
   .rcard h3{font-size:21px;font-weight:800;margin:12px 0 10px;letter-spacing:-.01em}
   .rcard p{font-size:15px;color:#555}
+  .rcard .more{display:inline-block;margin-top:16px;font-size:13px;font-weight:700;color:var(--accent);opacity:0;transform:translateX(-4px);transition:.18s}
+  .rcard:hover .more,.rcard:focus-visible .more{opacity:1;transform:translateX(0)}
+  .rcard template{display:none}
+
+  /* Research detail modal */
+  .rmodal{position:fixed;inset:0;background:rgba(10,10,10,.6);display:none;align-items:center;justify-content:center;z-index:9999;padding:24px;animation:lightbox-in .15s ease}
+  .rmodal.open{display:flex}
+  .rmodal-card{position:relative;background:#fff;border-radius:18px;max-width:640px;width:100%;max-height:85vh;overflow-y:auto;padding:40px 40px 36px;box-shadow:0 24px 60px rgba(0,0,0,.25)}
+  .rmodal-top{position:absolute;top:0;left:0;right:0;height:6px;background:var(--accent);border-radius:18px 18px 0 0}
+  .rmodal-close{position:absolute;top:16px;right:18px;border:none;background:none;font-size:26px;line-height:1;color:var(--muted);cursor:pointer;padding:6px}
+  .rmodal-close:hover{color:var(--ink)}
+  .rmodal-num{font-size:13px;font-weight:800;color:var(--accent);letter-spacing:.1em;margin-top:8px}
+  .rmodal-title{font-size:26px;font-weight:800;margin:10px 0 18px;letter-spacing:-.01em}
+  .rmodal-body{font-size:16px;color:#444;line-height:1.75;text-align:justify;word-break:keep-all}
 
   /* Publications */
   .subhead{font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin:36px 0 6px}
@@ -138,7 +154,8 @@
   }
 
   /* Justified body text */
-  .hero p.sub,.lead,.pi p,.rcard p,.ncard p,#contact .join,#contact p,.grp .ghnote,.alumni .row .now,.pub .venue{text-align:justify;word-break:keep-all}
+  .hero p.sub,.lead,.pi p,.ncard p,#contact .join,#contact p,.grp .ghnote,.alumni .row .now,.pub .venue{text-align:justify;word-break:keep-all}
+  .rcard p{text-align:left;word-break:keep-all}
 
   /* Projects */
   .pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
