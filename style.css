@@ -227,6 +227,13 @@
 #post .postbody .sysbox p:first-child strong{font-size:16.5px;font-weight:800}
 #post .postbody .sysbox .sysnum{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;flex-shrink:0;border-radius:50%;background:var(--accent2);color:#fff;font-weight:800;font-size:13px}
 
+/* Post body — bulleted sub-points inside a sysbox (heading + nested paragraphs per bullet) */
+#post .postbody .sysbox ul{margin:0;padding-left:22px}
+#post .postbody .sysbox li{margin-bottom:26px}
+#post .postbody .sysbox li:last-child{margin-bottom:0}
+#post .postbody .sysbox li>p:first-child{display:block;font-weight:800;font-size:16px;margin-bottom:10px}
+#post .postbody .sysbox li>p+p{margin-top:10px}
+
 /* Post body — diagram card (image + caption centered, framed like the system boxes) */
 #post .postbody .diagram-box{border:1px solid var(--line);border-radius:16px;background:#fff;padding:10px;margin:24px 0;text-align:center;transition:.18s}
 #post .postbody .diagram-box:hover{border-color:var(--ink);box-shadow:0 14px 30px rgba(0,0,0,.05)}
