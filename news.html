@@ -1,51 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-<link rel="stylesheet" href="style.css">
-<title>News · Operations & Experience Lab — Hongik University</title>
-</head>
-<body>
-
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="index.html"><span class="dot"></span><span>Operations &amp; Experience Lab</span></a>
-    <nav>
-      <ul>
-        <li><a href="index.html" data-page="index.html">Home</a></li>
-        <li><a href="professor.html" data-page="professor.html">Professor</a></li>
-        <li><a href="members.html" data-page="members.html">Members</a></li>
-        <li><a href="research.html" data-page="research.html">Research</a></li>
-        <li><a href="projects.html" data-page="projects.html">Projects</a></li>
-        <li><a href="publications.html" data-page="publications.html">Publications</a></li>
-        <li><a href="news.html" data-page="news.html">News</a></li>
-        <li><a href="blog.html" data-page="blog.html">Blog</a></li>
-        <li><a href="contact.html" data-page="contact.html">Contact</a></li>
-        <li><button class="langbtn" onclick="toggleLang()"><span class="lang-en">한국어</span><span class="lang-ko">ENG</span></button></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
+---
+layout: default
+title: News
+permalink: /news.html
+---
 <section id="news">
   <div class="wrap">
     <div class="eyebrow"><span class="lang-en">News</span><span class="lang-ko">소식</span></div>
     <h2 class="sec"><span class="lang-en">Lab News</span><span class="lang-ko">연구실 소식</span></h2>
-    <p class="lead"><span class="lang-en">Recent highlights — edit or add items as needed.</span><span class="lang-ko">최근 소식입니다 — 필요에 따라 수정·추가하세요.</span></p>
-    <div class="ngrid">
-      <div class="ncard"><div class="top"></div><div class="body"><div class="date">2026</div><h4><span class="lang-en">Patent granted: haptic wearable for the visually impaired</span><span class="lang-ko">특허 등록: 시각장애인용 햅틱 웨어러블</span></h4><p><span class="lang-en">A wearable device providing obstacle information was granted Korean Patent No. 10-2946415.</span><span class="lang-ko">장애물 정보를 제공하는 웨어러블 기기가 특허(KR 10-2946415)로 등록되었습니다.</span></p></div></div>
-      <div class="ncard"><div class="top"></div><div class="body"><div class="date">2025–2026</div><h4><span class="lang-en">CRM Insight Tool project with Apple Korea</span><span class="lang-ko">Apple Korea CRM 인사이트 툴 프로젝트</span></h4><p><span class="lang-en">The lab is developing and maintaining a CRM Insight Tool (CIT) for Apple Korea.</span><span class="lang-ko">Apple Korea를 위한 CRM 인사이트 툴(CIT)을 개발·운영하고 있습니다.</span></p></div></div>
-      <div class="ncard"><div class="top"></div><div class="body"><div class="date">2024</div><h4><span class="lang-en">Best Paper Award at ANQ Congress, Yokohama</span><span class="lang-ko">ANQ 요코하마 학술대회 최우수 논문상</span></h4><p><span class="lang-en">Recognized for work on service quality, digitalization, and customer experience across Korea and Vietnam.</span><span class="lang-ko">한국·베트남의 서비스 품질·디지털화·고객 경험 연구로 수상했습니다.</span></p></div></div>
+    <p class="lead"><span class="lang-en">Announcements, awards, and project updates from the lab.</span><span class="lang-ko">연구실의 공지, 수상, 프로젝트 소식을 전합니다.</span></p>
+    <div class="feed newsfeed">
+      {% for post in site.posts %}{% if post.category == 'news' %}
+      <a class="fcard {{ post.category }}" href="{{ post.url | relative_url }}">
+        <div class="ftop"></div>
+        <div class="fbody">
+          <div class="fmeta">
+            <span class="fdate">{% if post.year %}{{ post.year }}{% else %}{{ post.date | date: "%Y" }}{% endif %}</span>
+          </div>
+          <h4><span class="lang-en">{{ post.title }}</span><span class="lang-ko">{{ post.title_ko | default: post.title }}</span></h4>
+          {% if post.excerpt_en or post.excerpt_ko %}<p><span class="lang-en">{{ post.excerpt_en }}</span><span class="lang-ko">{{ post.excerpt_ko | default: post.excerpt_en }}</span></p>{% endif %}
+        </div>
+      </a>
+      {% endif %}{% endfor %}
     </div>
   </div>
 </section>
-
-<footer>
-  <div class="wrap">© <span id="yr"></span> Operations &amp; Experience Lab · Hongik University. <span class="lang-en">Hongik University, College of Business Administration.</span><span class="lang-ko">홍익대학교 경영대학.</span></div>
-</footer>
-
-<script src="app.js"></script>
-</body>
-</html>
