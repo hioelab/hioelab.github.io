@@ -84,8 +84,12 @@
   // localStorage instantly, and only ever wait on the network the very first
   // time a given browser opens the post. The hit itself is still recorded
   // every visit in the background.
+  // On a local preview (localhost/127.0.0.1/file://), we read the count
+  // instead of hitting it, so checking a post locally never inflates the
+  // public view count.
   var vc = document.querySelector('.viewcount[data-slug]');
   if (vc) {
+    var isLocalPreview = /^(localhost|127\.0\.0\.1|\[::1\]|0\.0\.0\.0)$/.test(location.hostname) || location.protocol === 'file:';
     var slug = vc.getAttribute('data-slug') || 'post';
     var cacheKey = 'oxlab-vc-' + slug;
     var cached = null;
@@ -97,7 +101,7 @@
       vc.style.visibility = 'hidden'; // avoid flashing a "–" placeholder
     }
 
-    fetch('https://abacus.jasoncameron.dev/hit/hioelab-blog/' + slug, { keepalive: true })
+    fetch('https://abacus.jasoncameron.dev/' + (isLocalPreview ? 'get' : 'hit') + '/hioelab-blog/' + slug, { keepalive: true })
       .then(function(r){ return r.json(); })
       .then(function(d){
         if (d && typeof d.value === 'number') {
