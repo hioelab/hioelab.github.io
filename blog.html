@@ -8,7 +8,7 @@ permalink: /blog.html
     <div class="eyebrow"><span class="lang-en">Blog</span><span class="lang-ko">블로그</span></div>
     <h2 class="sec"><span class="lang-en">Research Notes</span><span class="lang-ko">리서치 노트</span></h2>
     <p class="lead"><span class="lang-en">Paper reviews and industry newsletters compiled by our lab members.</span><span class="lang-ko">연구실 구성원들이 정리하는 논문 리뷰와 기업 뉴스레터를 전합니다.</span></p>
-    <div class="bloglist">
+    <div class="bloglist" id="bloglist" data-page-size="5">
       {% for post in site.posts %}{% if post.category == 'blog' %}
       <a class="blogitem" href="{{ post.url | relative_url }}">
         <div class="bdate">{{ post.date | date: "%Y.%m.%d" }}</div>
@@ -19,5 +19,6 @@ permalink: /blog.html
       </a>
       {% endif %}{% endfor %}
     </div>
+    <div class="blogpager" id="blogpager"></div>
   </div>
 </section>

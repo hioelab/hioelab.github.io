@@ -182,6 +182,16 @@
 .blogitem .bdate{font-size:13px;color:var(--accent);font-weight:700}
 .blogitem h3{font-size:21px;font-weight:800;margin:6px 0 6px;letter-spacing:-.01em}
 .blogitem p{font-size:15px;color:#555;text-align:justify;word-break:keep-all}
+.blogitem[hidden]{display:none}
+
+/* Blog list pagination */
+.blogpager{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:36px;flex-wrap:wrap}
+.blogpager button{border:1px solid var(--line);background:#fff;color:var(--ink);font:inherit;font-size:14px;font-weight:700;min-width:38px;height:38px;padding:0 12px;border-radius:30px;cursor:pointer;transition:.15s}
+.blogpager button:hover:not(:disabled){border-color:var(--ink)}
+.blogpager button.active{background:var(--ink);border-color:var(--ink);color:#fff;cursor:default}
+.blogpager button:disabled{opacity:.35;cursor:default}
+.blogpager button.pg-nav{padding:0 16px}
+
 #post .backlink{display:inline-block;margin-bottom:24px;font-weight:700;color:var(--muted)}
 #post .backlink:hover{color:var(--accent)}
 #post .postt{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.12}

@@ -115,4 +115,63 @@
       })
       .catch(function(){ if (!cached) vc.style.display = 'none'; });
   }
+
+  // Blog list pagination (client-side: the full list is still rendered by
+  // Jekyll/Liquid as before, this just shows/hides items in pages so search
+  // engines and no-JS visitors still see the complete list).
+  var bloglist = document.getElementById('bloglist');
+  if (bloglist) {
+    var blogItems = Array.prototype.slice.call(bloglist.querySelectorAll('.blogitem'));
+    var pageSize = parseInt(bloglist.getAttribute('data-page-size'), 10) || 5;
+    var totalPages = Math.max(1, Math.ceil(blogItems.length / pageSize));
+    var pager = document.getElementById('blogpager');
+
+    var scrollToListTop = function () {
+      var top = bloglist.getBoundingClientRect().top + window.pageYOffset - 90;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    };
+
+    var renderPager = function (current) {
+      if (!pager) return;
+      pager.innerHTML = '';
+      if (totalPages <= 1) return;
+
+      var prev = document.createElement('button');
+      prev.type = 'button';
+      prev.className = 'pg-nav';
+      prev.innerHTML = '<span class="lang-en">Prev</span><span class="lang-ko">이전</span>';
+      prev.disabled = current === 1;
+      prev.addEventListener('click', function () { showPage(current - 1); scrollToListTop(); });
+      pager.appendChild(prev);
+
+      for (var i = 1; i <= totalPages; i++) {
+        (function (pageNum) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.textContent = pageNum;
+          if (pageNum === current) b.className = 'active';
+          b.addEventListener('click', function () { showPage(pageNum); scrollToListTop(); });
+          pager.appendChild(b);
+        })(i);
+      }
+
+      var next = document.createElement('button');
+      next.type = 'button';
+      next.className = 'pg-nav';
+      next.innerHTML = '<span class="lang-en">Next</span><span class="lang-ko">다음</span>';
+      next.disabled = current === totalPages;
+      next.addEventListener('click', function () { showPage(current + 1); scrollToListTop(); });
+      pager.appendChild(next);
+    };
+
+    var showPage = function (p) {
+      p = Math.min(Math.max(p, 1), totalPages);
+      blogItems.forEach(function (el, i) {
+        el.hidden = !(i >= (p - 1) * pageSize && i < p * pageSize);
+      });
+      renderPager(p);
+    };
+
+    showPage(1);
+  }
 })();
