@@ -225,7 +225,7 @@
 #post .postbody ul.reflist a{font-weight:600}
 #post .postbody li{margin-bottom:6px}
 #post .postbody img{max-width:100%;border-radius:10px;margin:14px 0}
-#post .postbody a{color:var(--accent2);border-bottom:1px solid var(--accent2)}
+#post.cat-blog .postbody a{color:var(--ink);border-bottom:1px solid var(--ink)}
 
 /* Latest / News feed cards */
 .feed{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
@@ -293,13 +293,13 @@
 #post .postbody a.linkcard .lc-main{display:flex;flex-direction:column;flex:1;padding:22px 24px;min-width:0}
 #post .postbody a.linkcard .lc-title{display:block;font-weight:800;font-size:15px;color:var(--ink);margin-bottom:6px;text-align:left}
 #post .postbody a.linkcard .lc-desc{display:block;font-size:13.5px;color:#555;margin-bottom:12px;text-align:left}
-#post .postbody a.linkcard .lc-url{display:block;font-size:12.5px;color:var(--accent2);font-weight:700}
-#post .postbody a.linkcard .lc-side{display:flex;width:170px;flex-shrink:0;background:var(--accent2);color:#fff;align-items:center;justify-content:center;padding:18px;font-weight:800;font-size:13.5px;text-align:center;line-height:1.4}
+#post.cat-blog .postbody a.linkcard .lc-url{display:block;font-size:12.5px;color:var(--ink);font-weight:700}
+#post.cat-blog .postbody a.linkcard .lc-side{display:flex;width:170px;flex-shrink:0;background:var(--ink);color:#fff;align-items:center;justify-content:center;padding:18px;font-weight:800;font-size:13.5px;text-align:center;line-height:1.4}
 @media(max-width:560px){#post .postbody a.linkcard{flex-direction:column}#post .postbody a.linkcard .lc-side{width:100%}}
 
 /* Post body — contributor / editor */
 #post .postbody .contrib{margin-top:54px;padding-top:28px;border-top:1px solid var(--line);display:flex;gap:36px;flex-wrap:wrap}
 #post .postbody .contrib .cr{display:flex;align-items:center;gap:10px}
 #post .postbody .contrib .cr-badge{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--accent);border-radius:20px;padding:5px 12px;white-space:nowrap}
-#post .postbody .contrib .cr-badge.editor{background:var(--accent2)}
+#post.cat-blog .postbody .contrib .cr-badge.editor{background:var(--ink)}
 #post .postbody .contrib .cr-name{font-weight:800;font-size:15px}
