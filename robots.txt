@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hioelab.github.io/sitemap.xml
