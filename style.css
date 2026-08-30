@@ -266,7 +266,7 @@
 #post .postbody .sysbox p:last-child{margin-bottom:0}
 #post .postbody .sysbox p:first-child{display:flex;align-items:center;gap:12px;margin-bottom:14px}
 #post .postbody .sysbox p:first-child strong{font-size:16.5px;font-weight:800}
-#post .postbody .sysbox .sysnum{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;flex-shrink:0;border-radius:50%;background:var(--accent2);color:#fff;font-weight:800;font-size:13px}
+#post.cat-blog .postbody .sysbox .sysnum{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;flex-shrink:0;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;font-size:13px}
 
 /* Post body — bulleted sub-points inside a sysbox (heading + nested paragraphs per bullet) */
 #post .postbody .sysbox ul{margin:0;padding-left:22px}
