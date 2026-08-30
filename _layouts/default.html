@@ -8,7 +8,68 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 <link rel="preconnect" href="https://abacus.jasoncameron.dev">
 <link rel="dns-prefetch" href="https://abacus.jasoncameron.dev">
-<title>{{ page.title | default: 'Operations & Experience Lab' }} · Operations & Experience Lab</title>
+{%- assign pg_title = page.title | default: 'Home' -%}
+{%- assign site_desc = '홍익대학교 경영대학 Operations &amp; Experience Lab(김승범 교수 연구실). 행동과학과 데이터과학을 기반으로 운영관리, 수익관리, 품질·서비스, 고객경험을 연구합니다.' -%}
+{%- if page.description -%}
+  {%- assign pg_desc = page.description -%}
+{%- elsif page.excerpt_ko or page.excerpt_en -%}
+  {%- assign post_lead = page.excerpt_ko | default: page.excerpt_en -%}
+  {%- capture pg_desc -%}{{ post_lead }} — Operations &amp; Experience Lab 블로그 · 홍익대학교 경영대학 김승범 교수 연구실{%- endcapture -%}
+{%- else -%}
+  {%- assign pg_desc = site_desc -%}
+{%- endif -%}
+{%- assign pg_desc = pg_desc | strip_html | strip_newlines | truncate: 200 -%}
+{%- assign pg_url = page.url | absolute_url -%}
+{%- assign pg_img = page.image | default: site.og_image | absolute_url -%}
+<title>{% if pg_title == 'Home' %}Operations &amp; Experience Lab — 홍익대학교 경영대학 김승범 교수 연구실{% else %}{{ pg_title }} · Operations &amp; Experience Lab — Hongik University{% endif %}</title>
+<!-- SEO -->
+<meta name="description" content="{{ pg_desc }}">
+<meta name="author" content="{{ site.author }}">
+<link rel="canonical" href="{{ pg_url }}">
+<meta property="og:site_name" content="Operations &amp; Experience Lab">
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="{% if pg_title == 'Home' %}Operations &amp; Experience Lab — 홍익대학교 경영대학 김승범 교수 연구실{% else %}{{ pg_title }} · Operations &amp; Experience Lab{% endif %}">
+<meta property="og:description" content="{{ pg_desc }}">
+<meta property="og:url" content="{{ pg_url }}">
+<meta property="og:image" content="{{ pg_img }}">
+{%- if page.layout == 'post' %}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{%- endif %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{% if pg_title == 'Home' %}Operations &amp; Experience Lab — 홍익대학교 경영대학 김승범 교수 연구실{% else %}{{ pg_title }} · Operations &amp; Experience Lab{% endif %}">
+<meta name="twitter:description" content="{{ pg_desc }}">
+<meta name="twitter:image" content="{{ pg_img }}">
+<!-- /SEO -->
+
+{%- if pg_title == 'Home' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchOrganization",
+  "name": "Operations & Experience Lab",
+  "alternateName": "홍익대학교 경영대학 김승범 교수 연구실",
+  "url": "https://hioelab.github.io/",
+  "logo": "https://hioelab.github.io/assets/img/og-cover.png",
+  "description": "행동과학과 데이터과학을 기반으로 운영관리, 수익관리, 품질·서비스, 고객경험을 연구하는 홍익대학교 경영대학 연구실입니다.",
+  "parentOrganization": {
+    "@type": "CollegeOrUniversity",
+    "name": "Hongik University",
+    "alternateName": "홍익대학교",
+    "url": "https://www.hongik.ac.kr/"
+  },
+  "member": {
+    "@type": "Person",
+    "name": "Seungbeom Kim",
+    "alternateName": "김승범",
+    "jobTitle": "Associate Professor",
+    "url": "https://hioelab.github.io/professor.html"
+  },
+  "knowsAbout": ["Operations Management","Revenue Management","Service Quality","Customer Experience","Behavioral Science","Data Science"]
+}
+</script>
+{%- endif %}
 </head>
 <body>
 
