@@ -16,7 +16,7 @@ editor_ko: "송지영"
 
 <a class="linkcard" href="https://doi.org/10.1287/mnsc.2025.02523" target="_blank" rel="noopener"><span class="lc-main"><span class="lc-title">The Rapid Adoption of Generative AI | Management Science</span><span class="lc-desc">Generative artificial intelligence (genAI) is a potentially important new technology, but its impact on the economy depends on the speed and intensity of adoption. This paper reports results from a...</span><span class="lc-url">🔗 doi.org/10.1287/mnsc.2025.02523</span></span><span class="lc-side">The Rapid Adoption of Generative AI</span></a>
 
-> Bick, A., Blandin, A., & Deming, D. J. (2026). The Rapid Adoption of Generative AI. *Management Science*, 0(0).
+> Bick, A., Blandin, A., & Deming, D. J. (2026). The Rapid Adoption of Generative AI. *Management Science*.
 
 ## ✔️ Introduction and Summary
 
@@ -29,27 +29,27 @@ editor_ko: "송지영"
 
 </div>
 
-Forecasts of just how much generative AI will affect the economy swing from one extreme to the other. The root cause is simple: until now, there was no reliable data measuring how many people were actually using AI. Researchers at the Federal Reserve Bank of St. Louis, Vanderbilt University, and the Harvard Kennedy School filled that gap with the first nationally representative survey of its kind in the United States.
+Forecasts of just how much generative AI will affect the economy vary sharply from researcher to researcher. The root cause is simple: until now, there was no reliable data measuring how many people were actually using AI. Researchers at the Federal Reserve Bank of St. Louis, Vanderbilt University, and the Harvard Kennedy School designed and ran the first nationally representative survey of its kind in the United States to fill that gap.
 
 As of late 2024, 45.5% of Americans aged 18–64 were using generative AI, and 32.1% of workers were using it directly in their jobs. Benchmarked against the year each technology's first mass-market product launched, that's a faster pace of diffusion than the PC, and it outpaces both the PC and the internet by an even wider margin. Over the same period, only 5.3% of firms reported that "our company uses AI." In other words, individual adoption is running ahead of organizational adoption.
 
 ## ✔️ Research Content and Logic
 
-Beyond the adoption numbers, the second axis this paper digs into is who adopts faster, and why.
+Beyond the adoption numbers, the second thing this paper sets out to learn is who adopts faster, and why.
 
 <div class="sysbox" markdown="1">
 
 - **The speed gap between individuals and organizations**
 
-    The gap between the worker survey (32.1%) and the firm survey (5.3%) is hard to write off as mere statistical noise. The researchers read it as a signal that workers are adopting new technology ahead of their organizations, and cite an analogy from Box CEO Aaron Levie: it echoes how, in the early 2010s, employees began using cloud storage services on personal accounts before their companies ever formally approved them.
+    The gap between the worker survey (32.1%) and the firm survey (5.3%) is large enough that it's hard to explain away as statistical noise. The researchers read it as a signal that workers are adopting new technology ahead of their organizations, and cite an analogy from Box CEO Aaron Levie: it echoes how, in the early 2010s, employees began using cloud storage services on personal accounts before their companies ever formally approved them.
 
 - **Occupational gaps and the nature of the work**
 
-    The paper compares work-related AI usage rates across 12 occupations, and the gaps between them are substantial. Computer and mathematical occupations top the list at 53.6%, while personal service occupations sit at the bottom at 15.8% — a gap of more than 3x between the highest and lowest. Whether that gap reflects mere preference or a genuine difference in the nature of the work needed separate verification. The researchers compared actual usage rates against existing research's predicted "occupational AI exposure," finding a correlation of 0.65–0.71 — evidence that the gap is rooted in the character of the work itself.
+    The paper compares work-related AI usage rates across 12 occupations, and the gaps between them are substantial. Computer and mathematical occupations top the list at 53.6%, while personal service occupations sit at the bottom at 15.8% — a gap of more than 3x between the highest and lowest. Whether that gap reflects preference or a genuine difference in the nature of the work needed separate verification. The researchers compared actual usage rates against existing research's predicted "occupational AI exposure," finding a correlation of 0.65–0.71 — evidence that the gap is rooted in the character of the work itself.
 
 - **Where the predictions miss**
 
-    Office and administrative roles and managerial roles are predicted to have similar AI exposure in theory, but actual usage among managers is more than double. Tracing the source of this mismatch, the researchers found that the perception "AI doesn't help with my work" (correlation −0.88) mattered far more than institutional barriers like "my company won't let me use it" (−0.30). What divides adoption isn't policy — it's how useful people feel it is. That said, company attitude itself turned out to be a powerful variable in its own right: 86% of employees who said their company encourages AI use actually used it, versus just 13% among those who said their company doesn't.
+    Office and administrative roles and managerial roles are predicted to have similar AI exposure in theory, but actual usage among managers is more than double. Tracing the source of this mismatch, the researchers found that the perception "AI doesn't help with my work" (correlation −0.88) mattered far more than institutional barriers like "my company won't let me use it" (−0.30). What determines adoption has more to do with how useful people feel it is than with policy. That said, company attitude itself turned out to be a powerful variable in its own right: 86% of employees who said their company encourages AI use actually used it, versus just 13% among those who said their company doesn't.
 
 </div>
 
@@ -63,7 +63,7 @@ The methodology rests on three devices built to turn this data into conclusions 
 
 <span class="sysnum">1</span> **Building a benchmark for comparison**
 
-A single number like "45% of people use generative AI" doesn't tell you whether that's fast or slow on its own. Rather than write new survey items, the researchers reused the exact question wording from the CPS's Computer and Internet Use Supplement (CIU), which has run since 1984. The original item asked, "Do you [directly] use a computer for your job?" The researchers took the post-2001 version, which dropped the word "directly," as their template and simply swapped "computer" for "generative AI," asking "Do you use Generative AI for your job?" Reusing the same question frame let them compare the diffusion of the two technologies on an identical yardstick. (For the comparison against PC adoption itself, the actual 1984 CIU response data served as the benchmark.)
+A single number like "45% of people use generative AI" doesn't tell you whether that's fast or slow on its own. Rather than write new survey items, the researchers reused the exact question wording from the CPS's Computer and Internet Use Supplement (CIU), which has run since 1984. The original item asked, "Do you [directly] use a computer for your job?" The researchers took the post-2001 version, which dropped the word "directly," as their template and simply swapped "computer" for "generative AI," asking "Do you use Generative AI for your job?" Reusing the same question frame let them compare the diffusion of the two technologies on the same yardstick. There was no need to survey PC adoption separately — the actual CIU response data from 1984 was used directly as the benchmark.
 
 </div>
 
@@ -79,7 +79,7 @@ Online surveys risk over-sampling people who are heavy internet users, and repea
 
 <span class="sysnum">3</span> **Converting survey responses into productivity figures**
 
-Scaling an individual's sense of "I saved a few hours" up to an industry-wide productivity figure requires a formal framework. The researchers used the Cobb-Douglas production function — the standard economic production function that explains output as a combination of two inputs, capital and labor — to convert time savings into output growth via the following approximation.
+Scaling an individual's sense of "I saved a few hours" up to an industry-wide productivity figure requires a separate way to convert one into the other. The researchers used the Cobb-Douglas production function (the standard economic production function that explains output as a combination of two inputs, capital and labor) to convert time savings into output growth via the following approximation.
 
 <div class="formula">\[\frac{\Delta Y}{Y} \approx (1-\alpha) \times \frac{\sum_i s_i \tilde{w}_i}{\sum_i \ell_i \tilde{w}_i}\]</div>
 
@@ -97,13 +97,13 @@ Plugging these figures into the production function model produces industry-leve
 
 ## ✔️ Conclusion
 
-This paper's contribution is that it is the first to pin down, with trustworthy numbers, just how much generative AI is actually being used. Forecasts about generative AI's economic impact have swung from one extreme to the other because there was no nationwide data measuring actual adoption on the ground — this study is the first to build data, using the same question design as official government surveys, that allows for historical comparison.
+This paper's contribution is that it is the first to pin down, with trustworthy numbers, just how much generative AI is actually being used. Forecasts about generative AI's economic impact have varied sharply from researcher to researcher because there was no nationwide data measuring actual adoption on the ground — this study is the first to build data, using the same question design as official government surveys, that allows for historical comparison.
 
 The data also puts existing theory to the test. Models predicting which occupations are more exposed to AI already existed, but no one had checked how well those predictions actually matched real behavior. This paper is the first to empirically demonstrate that correlation, and by pinpointing where the predictions break down, it surfaces a factor existing models were missing: the practical usefulness individuals actually feel.
 
 The policy implications are clear too. Until now, the indicators governments and companies have leaned on to gauge AI diffusion have mostly come from firm-level surveys. This paper shows that such indicators substantially underestimate the real pace of diffusion. Managers now need to think about how to formally support usage that has already spread organically from the ground up, while also addressing the security concerns that come with occupations handling sensitive information.
 
-That said, the paper's estimates carry two distinct lower bounds. One is the adoption rate itself. Passive or embedded AI use that respondents aren't even aware of — autocomplete features, for instance — doesn't get captured in a survey, so the researchers treat their adoption estimate as a floor that likely understates the real number. The other is the productivity-gain estimate. That figure rests on the assumption that time saved translates directly into output, and it doesn't capture the larger productivity gains that could come from redesigning work processes entirely or automating them outright. The researchers themselves regard this, too, as closer to a lower bound over the long run. Even so, the measurement framework this paper built, along with the microdata it plans to release, looks set to become a benchmark for tracking generative AI's labor-market impact going forward.
+That said, the paper's estimates carry two distinct lower bounds. One is the adoption rate itself. Passive or embedded AI use that respondents aren't even aware of — autocomplete features, for instance — doesn't get captured in a survey, so the researchers treat their adoption estimate as a floor that likely understates the real number. The other is the productivity-gain estimate. That figure rests on the assumption that time saved translates directly into output, and it doesn't capture the larger productivity gains that could come from redesigning work processes entirely or automating them outright. The researchers explain that this, too, is closer to a lower bound when viewed over the long run. Even so, the measurement framework this paper built, along with the microdata it plans to release, looks set to become a benchmark for tracking generative AI's labor-market impact going forward.
 
 ## ✔️ References
 
@@ -123,7 +123,7 @@ That said, the paper's estimates carry two distinct lower bounds. One is the ado
 
 <a class="linkcard" href="https://doi.org/10.1287/mnsc.2025.02523" target="_blank" rel="noopener"><span class="lc-main"><span class="lc-title">The Rapid Adoption of Generative AI | Management Science</span><span class="lc-desc">Generative artificial intelligence (genAI) is a potentially important new technology, but its impact on the economy depends on the speed and intensity of adoption. This paper reports results from a...</span><span class="lc-url">🔗 doi.org/10.1287/mnsc.2025.02523</span></span><span class="lc-side">The Rapid Adoption of Generative AI</span></a>
 
-> Bick, A., Blandin, A., & Deming, D. J. (2026). The Rapid Adoption of Generative AI. *Management Science*, 0(0).
+> Bick, A., Blandin, A., & Deming, D. J. (2026). The Rapid Adoption of Generative AI. *Management Science*.
 
 ## ✔️ 소개 및 요약
 
@@ -136,27 +136,27 @@ That said, the paper's estimates carry two distinct lower bounds. One is the ado
 
 </div>
 
-생성형 AI가 경제에 얼마나 영향을 미칠지에 대한 전망은 극과 극으로 갈린다. 근본 원인은 단순하다. 실제로 얼마나 많은 사람이 AI를 쓰고 있는지 제대로 측정한 데이터가 없었기 때문이다. 세인트루이스 연방준비은행(Federal Reserve Bank of St. Louis), 밴더빌트대(Vanderbilt University), 하버드 케네디스쿨(Harvard Kennedy School) 연구진이 미국 최초의 전국 대표 설문조사로 이 공백을 메웠다.
+생성형 AI가 경제에 얼마나 영향을 미칠지에 대한 전망은 연구자마다 크게 엇갈린다. 근본 원인은 단순하다. 실제로 얼마나 많은 사람이 AI를 쓰고 있는지 제대로 측정한 데이터가 없었기 때문이다. 세인트루이스 연방준비은행(Federal Reserve Bank of St. Louis), 밴더빌트대(Vanderbilt University), 하버드 케네디스쿨(Harvard Kennedy School) 연구진이 미국 최초의 전국 대표 설문조사를 직접 설계해 이 자리를 채웠다.
 
 2024년 말 기준 미국의 18~64세 인구 중 45.5%가 생성형 AI를 쓰고 있었고, 근로자의 32.1%는 업무에 직접 활용하고 있었다. 각 기술의 첫 대중 시장 제품 출시를 기준으로 비교하면, 이는 PC보다 빠르고 PC와 인터넷 둘 다를 더 큰 격차로 앞선 확산세다. 같은 시기 "우리 회사가 AI를 쓴다"고 답한 기업은 5.3%에 불과했다. 개인의 도입이 조직의 도입을 앞서고 있다는 뜻이다.
 
 ## ✔️ 연구 내용 및 논리
 
-도입률 숫자 다음으로 이 논문이 파고드는 축은 "누가, 왜 더 빨리 받아들이는가"다.
+도입률 숫자 다음으로 이 논문이 알고자 하는 것은 "누가, 왜 더 빨리 받아들이는가"다.
 
 <div class="sysbox" markdown="1">
 
 - **개인과 조직의 속도 차이**
 
-    근로자 대상 조사(32.1%)와 기업 대상 조사(5.3%)의 격차는 단순한 통계 오차로 보기 어렵다. 연구진은 이 격차를 근로자가 조직보다 먼저 신기술을 받아들이고 있다는 신호로 해석하며, Box의 CEO 아론 레비(Aaron Levie)의 비유를 인용해 2010년대 초 직원들이 회사의 공식 승인 없이 클라우드 저장 서비스를 개인 계정으로 먼저 쓰기 시작했던 흐름과 유사하다고 설명한다.
+    근로자 대상 조사(32.1%)와 기업 대상 조사(5.3%)의 격차는 통계 오차로 설명하기 어려운 수준이다. 연구진은 이 격차를 근로자가 조직보다 먼저 신기술을 받아들이고 있다는 신호로 해석하며, Box의 CEO 아론 레비(Aaron Levie)의 비유를 인용해 2010년대 초 직원들이 회사의 공식 승인 없이 클라우드 저장 서비스를 개인 계정으로 먼저 쓰기 시작했던 흐름과 유사하다고 설명한다.
 
 - **직업별 격차와 업무 성격의 관계**
 
-    논문은 12개 직종의 업무용 AI 사용률을 비교했는데, 직종 간 격차가 상당했다. 컴퓨터·수학 직군이 53.6%로 가장 높았고 대인서비스직이 15.8%로 가장 낮아, 최고와 최저 직종 간 격차가 3배가 넘었다. 이 격차가 단순한 취향 문제인지, 실제 업무 성격의 차이인지를 가리려면 별도의 검증이 필요하다. 연구진은 기존 연구가 예측한 "직업별 AI 노출도"와 실제 사용률을 비교했다. 상관관계 0.65~0.71로, 이 격차가 업무 성격에서 비롯된다는 근거를 확보했다.
+    논문은 12개 직종의 업무용 AI 사용률을 비교했는데, 직종 간 격차가 상당했다. 컴퓨터·수학 직군이 53.6%로 가장 높았고 대인서비스직이 15.8%로 가장 낮아, 최고와 최저 직종 간 격차가 3배가 넘었다. 이 격차가 취향의 문제인지, 실제 업무 성격의 차이인지를 가리려면 별도의 검증이 필요하다. 연구진은 기존 연구가 예측한 "직업별 AI 노출도"와 실제 사용률을 비교했다. 상관관계 0.65~0.71로, 이 격차가 업무 성격에서 비롯된다는 근거를 확보했다.
 
 - **예측이 어긋나는 지점**
 
-    사무행정직과 관리직은 이론상 AI 노출도가 비슷한데 실제 사용률은 관리직이 두 배 이상 높다. 이 어긋남의 원인을 추적한 결과, "AI가 내 일에 도움이 안 된다"는 인식(상관관계 -0.88)이 "회사가 못 쓰게 한다"는 제도적 장벽(-0.30)보다 훨씬 강하게 작용했다. 도입을 가르는 축은 제도가 아니라 체감이다. 다만 회사의 태도 자체는 별개로 강력한 변수였다. 회사가 사용을 권장한다고 답한 직원의 86%가 실제로 AI를 쓰는 반면, 권장하지 않는다고 답한 직원은 13%만 썼다.
+    사무행정직과 관리직은 이론상 AI 노출도가 비슷한데 실제 사용률은 관리직이 두 배 이상 높다. 이 어긋남의 원인을 추적한 결과, "AI가 내 일에 도움이 안 된다"는 인식(상관관계 -0.88)이 "회사가 못 쓰게 한다"는 제도적 장벽(-0.30)보다 훨씬 강하게 작용했다. 도입 여부를 가르는 것은 제도보다 체감에 가깝다. 다만 회사의 태도 자체는 별개로 강력한 변수였다. 회사가 사용을 권장한다고 답한 직원의 86%가 실제로 AI를 쓰는 반면, 권장하지 않는다고 답한 직원은 13%만 썼다.
 
 </div>
 
@@ -170,7 +170,7 @@ That said, the paper's estimates carry two distinct lower bounds. One is the ado
 
 <span class="sysnum">1</span> **비교 기준을 만드는 방식**
 
-"생성형 AI 사용자가 45%다"라는 숫자 하나만으로는 이게 빠른 건지 느린 건지 알 수 없다. 연구진은 새 문항을 만드는 대신, 1984년부터 시행된 CPS의 컴퓨터·인터넷이용 부가조사(CIU)에서 쓰던 질문 틀을 재사용했다. 원래 문항은 "Do you [directly] use a computer for your job?"(업무에 [직접] 컴퓨터를 쓰십니까?)였는데, 연구진은 'directly'가 빠진 2001년 이후 버전을 기준 삼아 "컴퓨터"만 "생성형 AI"로 바꿔 "Do you use Generative AI for your job?"이라고 물었다. 같은 문항 틀을 재사용해 두 기술의 확산세를 동일한 잣대로 비교할 수 있게 했다. (PC 도입률 자체와의 비교에는 1984년의 실제 CIU 응답 데이터가 벤치마크로 쓰였다.)
+"생성형 AI 사용자가 45%다"라는 숫자 하나만으로는 이게 빠른 건지 느린 건지 알 수 없다. 연구진은 새 문항을 만드는 대신, 1984년부터 시행된 CPS의 컴퓨터·인터넷이용 부가조사(CIU)에서 쓰던 질문 틀을 재사용했다. 원래 문항은 "Do you [directly] use a computer for your job?"(업무에 [직접] 컴퓨터를 쓰십니까?)였는데, 연구진은 'directly'가 빠진 2001년 이후 버전을 기준 삼아 "컴퓨터"만 "생성형 AI"로 바꿔 "Do you use Generative AI for your job?"이라고 물었다. 같은 문항 틀을 재사용해 두 기술의 확산세를 같은 기준으로 비교할 수 있게 한 것이다. PC 도입률 자체는 새로 조사할 필요 없이, 1984년 당시 실제로 시행된 CIU 응답 데이터를 그대로 가져와 벤치마크로 삼았다.
 
 </div>
 
@@ -186,7 +186,7 @@ That said, the paper's estimates carry two distinct lower bounds. One is the ado
 
 <span class="sysnum">3</span> **설문 응답을 생산성 수치로 바꾸는 방식**
 
-"몇 시간 아꼈다"는 개인의 체감을 산업 전체의 생산성 수치로 확장하려면 계산틀이 필요하다. 연구진은 콥-더글라스 생산함수(Cobb-Douglas production function) — 자본과 노동 두 투입 요소의 조합으로 산출량을 설명하는 경제학의 표준 생산함수 — 를 이용해 다음 근사식으로 시간 절약을 산출량 증가율로 환산했다.
+"몇 시간 아꼈다"는 개인의 체감을 산업 전체의 생산성 수치로 확장하려면 별도의 환산 방법이 필요하다. 연구진은 콥-더글라스 생산함수(자본과 노동 두 투입 요소의 조합으로 산출량을 설명하는 경제학의 표준 생산함수)를 이용해 다음 근사식으로 시간 절약을 산출량 증가율로 환산했다.
 
 <div class="formula">\[\frac{\Delta Y}{Y} \approx (1-\alpha) \times \frac{\sum_i s_i \tilde{w}_i}{\sum_i \ell_i \tilde{w}_i}\]</div>
 
@@ -204,13 +204,13 @@ That said, the paper's estimates carry two distinct lower bounds. One is the ado
 
 ## ✔️ 결론
 
-이 논문의 기여는 생성형 AI가 얼마나 쓰이는지를 처음으로 신뢰할 수 있는 숫자로 확정했다는 데 있다. 생성형 AI의 경제적 파급력을 둘러싼 전망이 극과 극으로 갈렸던 건 실제 도입 실태를 측정한 전국 단위 데이터가 없었기 때문인데, 이 연구는 정부 공식 조사와 동일한 문항 설계로 역사적 비교가 가능한 데이터를 처음 구축했다.
+이 논문의 기여는 생성형 AI가 얼마나 쓰이는지를 처음으로 신뢰할 수 있는 숫자로 확정했다는 데 있다. 생성형 AI의 경제적 파급력을 둘러싼 전망이 연구자마다 크게 엇갈렸던 건 실제 도입 실태를 측정한 전국 단위 데이터가 없었기 때문인데, 이 연구는 정부 공식 조사와 동일한 문항 설계로 역사적 비교가 가능한 데이터를 처음 구축했다.
 
 이 데이터는 기존 이론도 검증한다. 어떤 직업이 AI에 더 노출되는지 예측하는 모델들은 이미 있었지만, 그 예측이 실제 행동과 얼마나 맞는지는 확인된 적이 없었다. 이 논문은 그 상관관계를 처음 실증했고, 예측이 빗나가는 지점을 짚어내면서 기존 모델이 놓치고 있는 요인, 즉 개인이 체감하는 실질적 유용성을 드러냈다.
 
 정책적 함의도 뚜렷하다. 지금까지 정부와 기업이 AI 확산을 진단할 때 참고해온 지표는 대부분 기업 대상 조사였다. 이 논문은 그런 지표가 실제 확산 속도를 상당히 과소평가하고 있다는 걸 보여준다. 관리자 입장에서는 이미 자생적으로 퍼진 사용을 어떻게 조직적으로 지원할지, 동시에 민감 정보를 다루는 직군에서 나오는 보안 우려는 어떻게 다룰지 함께 고민해야 한다.
 
-다만 이 연구의 추정치에는 성격이 다른 두 개의 하한선이 존재한다. 하나는 도입률 자체다. 응답자가 인지하지 못하는 수동적·내장형 AI 사용(예: 자동완성 기능)은 설문에 잡히지 않으므로, 연구진은 도입률 추정치 자체를 실제보다 낮게 잡힌 하한선으로 본다. 다른 하나는 생산성 향상 추정치다. 이 수치는 절약한 시간이 그대로 성과로 이어진다는 가정에 기반하며, 업무 프로세스 자체를 재설계하거나 완전히 자동화하는 데서 나올 더 큰 생산성 효과는 잡아내지 못한다. 연구진 스스로도 이를 장기적 관점에서는 하한선에 가깝다고 본다. 그럼에도 이 논문이 구축한 측정 틀과 공개 예정인 마이크로데이터는 앞으로 생성형 AI의 노동시장 영향을 추적하는 기준점이 될 것으로 보인다.
+다만 이 연구의 추정치에는 성격이 다른 두 개의 하한선이 존재한다. 하나는 도입률 자체다. 응답자가 인지하지 못하는 수동적·내장형 AI 사용(예: 자동완성 기능)은 설문에 잡히지 않으므로, 연구진은 도입률 추정치 자체를 실제보다 낮게 잡힌 하한선으로 본다. 다른 하나는 생산성 향상 추정치다. 이 수치는 절약한 시간이 그대로 성과로 이어진다는 가정에 기반하며, 업무 프로세스 자체를 재설계하거나 완전히 자동화하는 데서 나올 더 큰 생산성 효과는 잡아내지 못한다. 연구진은 이 역시 장기적 관점에서는 하한선에 가깝다고 설명한다. 그럼에도 이 논문이 구축한 측정 틀과 공개 예정인 마이크로데이터는 앞으로 생성형 AI의 노동시장 영향을 추적하는 기준점이 될 것으로 보인다.
 
 ## ✔️ 참고문헌
 
