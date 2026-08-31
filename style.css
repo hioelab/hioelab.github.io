@@ -53,7 +53,7 @@
   .pi .facts{list-style:none;display:grid;gap:8px;margin-top:14px}
   .pi .facts li{font-size:14.5px;color:#444;padding-left:20px;position:relative}
   .pi .facts li:before{content:"▸";position:absolute;left:0;color:var(--accent)}
-  .members{margin-top:54px}
+  .members{margin-top:28px}
   .member-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:30px;margin-top:16px}
   .mcard{text-align:left}
   .mcard .av{width:100%;aspect-ratio:4/5;margin:0;border-radius:12px;background:linear-gradient(135deg,#f2f2f2,#e0e0e0);display:flex;align-items:center;justify-content:center;color:#a8a8a8;font-size:12px;border:1px solid var(--line);overflow:hidden}
@@ -66,6 +66,7 @@
 
   /* Member groups / terms / alumni */
   .grp{margin-top:46px}
+  .grp:first-child{margin-top:0}
   .grp .gh{font-size:20px;font-weight:800;letter-spacing:-.01em;margin-bottom:6px}
   .grp .ghnote{color:var(--muted);font-size:14.5px;margin:2px 0 6px;max-width:72ch}
   .term{margin-top:26px}
@@ -84,13 +85,14 @@
   /* Research */
   .rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
   .rcard{border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:.18s;background:#fff;
-    display:block;width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer;-webkit-appearance:none}
+    display:flex;flex-direction:column;width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer;-webkit-appearance:none}
   .rcard:hover{border-color:var(--ink);transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.06)}
   .rcard:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-  .rcard .num{font-size:13px;font-weight:800;color:var(--accent);letter-spacing:.1em}
-  .rcard h3{font-size:21px;font-weight:800;margin:12px 0 10px;letter-spacing:-.01em}
-  .rcard p{font-size:15px;color:#555}
-  .rcard .more{display:inline-block;margin-top:16px;font-size:13px;font-weight:700;color:var(--accent);opacity:0;transform:translateX(-4px);transition:.18s}
+  .rcard .num{font-size:13px;font-weight:800;color:var(--accent);letter-spacing:.1em;flex:0 0 auto}
+  .rcard h3{font-size:21px;font-weight:800;margin:12px 0 10px;letter-spacing:-.01em;line-height:1.25;min-height:52.5px;flex:0 0 auto}
+  .rcard p{font-size:15px;color:#555;flex:1 0 auto;margin:0}
+  body.ko .rcard h3{margin-bottom:4px}
+  .rcard .more{display:inline-block;margin-top:16px;font-size:13px;font-weight:700;color:var(--accent);opacity:0;transform:translateX(-4px);transition:.18s;flex:0 0 auto}
   .rcard:hover .more,.rcard:focus-visible .more{opacity:1;transform:translateX(0)}
   .rcard template{display:none}
 
@@ -197,6 +199,7 @@
 #post .backlink{display:inline-block;margin-bottom:24px;font-weight:700;color:var(--muted)}
 #post .backlink:hover{color:var(--accent)}
 #post .postt{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.12}
+#post .postsubtitle{font-size:16px;color:#555;margin:10px 0 0;text-align:justify;word-break:keep-all}
 #post .postdate{color:var(--accent);font-weight:700;margin:10px 0 12px}
 #post .postdate .viewcount{color:var(--muted);font-weight:600;font-size:15px}
 #post .postmeta{display:flex;flex-wrap:wrap;gap:4px;font-size:15px;margin:0 0 30px;text-align:left}

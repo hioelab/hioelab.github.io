@@ -8,6 +8,9 @@ layout: default
       <span class="lang-en">{{ page.title }}</span>
       <span class="lang-ko">{{ page.title_ko | default: page.title }}</span>
     </h1>
+    {% if page.excerpt_en or page.excerpt_ko %}
+    <p class="postsubtitle"><span class="lang-en">{{ page.excerpt_en }}</span><span class="lang-ko">{{ page.excerpt_ko | default: page.excerpt_en }}</span></p>
+    {% endif %}
     <div class="postdate">{{ page.date | date: "%Y.%m.%d" }}{% if page.category %} · {{ page.category | capitalize }}{% endif %} · <span class="viewcount" data-slug="{{ page.url | slugify }}"><span class="lang-en"><span class="vc-count">–</span> views</span><span class="lang-ko">조회수 <span class="vc-count">–</span></span></span></div>
     {% if page.contributor or page.editor %}
     <div class="postmeta">{% if page.contributor %}<span class="cr-chip"><span class="cr-role">Contributor</span> <span class="cr-name"><span class="lang-en">{{ page.contributor }}</span><span class="lang-ko">{{ page.contributor_ko | default: page.contributor }}</span></span></span>{% endif %}{% if page.contributor and page.editor %}<span class="cr-sep"> · </span>{% endif %}{% if page.editor %}<span class="cr-chip cr-editor"><span class="cr-role">Editor</span> <span class="cr-name"><span class="lang-en">{{ page.editor }}</span><span class="lang-ko">{{ page.editor_ko | default: page.editor }}</span></span></span>{% endif %}</div>
