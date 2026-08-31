@@ -8,7 +8,7 @@ baseurl: ""
 # 검색엔진 최적화(SEO) 설정
 lang: ko
 author: Seungbeom Kim
-og_image: /assets/img/og-cover.png
+og_image: /assets/img/og-cover-v2.png
 
 plugins:
   - jekyll-sitemap
