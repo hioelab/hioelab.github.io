@@ -32,7 +32,7 @@
 <link rel="stylesheet" href="style.css">
 <title>Members · Operations & Experience Lab — Hongik University</title>
 </head>
-<body>
+<body class="no-copy">
 
 <header>
   <div class="wrap nav">
@@ -126,5 +126,21 @@
 </footer>
 
 <script src="app.js"></script>
+
+<script>
+(function () {
+  // Lightweight copy-protection: discourage casual right-click save / copy of site text & images.
+  // Not a real DRM -- determined visitors can still use devtools, view-source, or screenshots.
+  document.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+  document.addEventListener('dragstart', function (e) {
+    if (e.target && e.target.tagName === 'IMG') e.preventDefault();
+  });
+  document.addEventListener('copy', function (e) {
+    var tag = e.target && e.target.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA') return; // allow copying from form fields
+    e.preventDefault();
+  });
+})();
+</script>
 </body>
 </html>
