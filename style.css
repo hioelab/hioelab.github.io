@@ -308,3 +308,9 @@
 #post .postbody .contrib .cr-badge{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--accent);border-radius:20px;padding:5px 12px;white-space:nowrap}
 #post.cat-blog .postbody .contrib .cr-badge.editor{background:var(--ink)}
 #post .postbody .contrib .cr-name{font-weight:800;font-size:15px}
+
+/* Copy protection: block text selection and image dragging/save affordances.
+   Note: this deters casual copying but cannot fully prevent it (browser devtools, screenshots, etc. always remain possible). */
+body.no-copy{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+body.no-copy input,body.no-copy textarea{-webkit-user-select:text;-moz-user-select:text;user-select:text}
+body.no-copy img{-webkit-user-drag:none;user-drag:none;pointer-events:auto}
