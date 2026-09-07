@@ -1,0 +1,13 @@
+.DS_Store
+_site/
+.jekyll-cache/
+*.tmp.*
+
+# 로컬 기록용 - 깃허브에 반영하지 않음
+AGENTS.md
+Gemfile.lock
+GitHub_Pages_배포가이드.md
+김승범 1.jpg
+블로그_사용법.md
+연구원_인수인계_Claude용.md
+인수인계.md
