@@ -5,6 +5,10 @@ url: "https://www.hioelab.com"
 # 만약 저장소 이름이 hioelab.github.io 가 아니라면(예: github.io-),
 # baseurl 을 "/저장소이름" 으로 바꾸세요. 예: baseurl: "/github.io-"
 baseurl: ""
+# 사이트 시간대. GitHub Pages는 UTC로 빌드하므로 이 설정이 없으면
+# '2026-08-16 00:00 +0900' 같은 글 날짜가 8월 15일로 밀려 주소·표시 날짜가 하루 어긋납니다.
+timezone: Asia/Seoul
+
 # 검색엔진 최적화(SEO) 설정
 lang: ko
 author: Seungbeom Kim
