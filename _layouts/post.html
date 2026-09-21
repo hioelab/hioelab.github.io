@@ -1,25 +1,33 @@
 ---
 layout: default
 ---
-<section id="post" class="cat-{{ page.category }}">
+{%- comment -%} 영어 글(_en_posts)은 원문(_posts)의 제목·본문을 그대로 가져와 보여 줍니다. {%- endcomment -%}
+{%- assign p = page -%}
+{%- assign pfx = '' -%}
+{%- if page.collection == 'en_posts' -%}
+  {%- assign pfx = '/en' -%}
+  {%- assign ko_url = page.url | remove_first: '/en' -%}
+  {%- assign p = site.posts | where: 'url', ko_url | first -%}
+{%- endif -%}
+<section id="post" class="cat-{{ p.category }}">
   <div class="wrap" style="max-width:780px">
-    <a class="backlink" href="{{ '/blog.html' | relative_url }}">← <span class="lang-en">Back to Blog</span><span class="lang-ko">블로그 목록으로</span></a>
+    <a class="backlink" href="{{ pfx | append: '/blog.html' | relative_url }}">← <span class="lang-en">Back to Blog</span><span class="lang-ko">블로그 목록으로</span></a>
     <h1 class="postt">
-      <span class="lang-en">{{ page.title }}</span>
-      <span class="lang-ko">{{ page.title_ko | default: page.title }}</span>
+      <span class="lang-en">{{ p.title }}</span>
+      <span class="lang-ko">{{ p.title_ko | default: p.title }}</span>
     </h1>
-    {% if page.subtitle_en or page.subtitle_ko %}
-    <p class="postdek"><span class="lang-en">{{ page.subtitle_en }}</span><span class="lang-ko">{{ page.subtitle_ko | default: page.subtitle_en }}</span></p>
+    {% if p.subtitle_en or p.subtitle_ko %}
+    <p class="postdek"><span class="lang-en">{{ p.subtitle_en }}</span><span class="lang-ko">{{ p.subtitle_ko | default: p.subtitle_en }}</span></p>
     {% endif %}
-    {% if page.excerpt_en or page.excerpt_ko %}
-    <p class="postsubtitle"><span class="lang-en">{{ page.excerpt_en }}</span><span class="lang-ko">{{ page.excerpt_ko | default: page.excerpt_en }}</span></p>
+    {% if p.excerpt_en or p.excerpt_ko %}
+    <p class="postsubtitle"><span class="lang-en">{{ p.excerpt_en }}</span><span class="lang-ko">{{ p.excerpt_ko | default: p.excerpt_en }}</span></p>
     {% endif %}
-    <div class="postdate">{{ page.date | date: "%Y.%m.%d" }}{% if page.category %} · {{ page.category | capitalize }}{% endif %} · <span class="viewcount" data-slug="{{ page.url | slugify }}"><span class="lang-en"><span class="vc-count">–</span> views</span><span class="lang-ko">조회수 <span class="vc-count">–</span></span></span></div>
-    {% if page.contributor or page.editor %}
-    <div class="postmeta">{% if page.contributor and page.editor and page.contributor == page.editor %}<span class="cr-chip cr-editor"><span class="cr-role">Contributor · Editor</span> <span class="cr-name"><span class="lang-en">{{ page.contributor }}</span><span class="lang-ko">{{ page.contributor_ko | default: page.contributor }}</span></span></span>{% else %}{% if page.contributor %}<span class="cr-chip"><span class="cr-role">Contributor</span> <span class="cr-name"><span class="lang-en">{{ page.contributor }}</span><span class="lang-ko">{{ page.contributor_ko | default: page.contributor }}</span></span></span>{% endif %}{% if page.contributor and page.editor %}<span class="cr-sep"> · </span>{% endif %}{% if page.editor %}<span class="cr-chip cr-editor"><span class="cr-role">Editor</span> <span class="cr-name"><span class="lang-en">{{ page.editor }}</span><span class="lang-ko">{{ page.editor_ko | default: page.editor }}</span></span></span>{% endif %}{% endif %}</div>
+    <div class="postdate">{{ p.date | date: "%Y.%m.%d" }}{% if p.category %} · {{ p.category | capitalize }}{% endif %} · <span class="viewcount" data-slug="{{ p.url | slugify }}"><span class="lang-en"><span class="vc-count">–</span> views</span><span class="lang-ko">조회수 <span class="vc-count">–</span></span></span></div>
+    {% if p.contributor or p.editor %}
+    <div class="postmeta">{% if p.contributor and p.editor and p.contributor == p.editor %}<span class="cr-chip cr-editor"><span class="cr-role">Contributor · Editor</span> <span class="cr-name"><span class="lang-en">{{ p.contributor }}</span><span class="lang-ko">{{ p.contributor_ko | default: p.contributor }}</span></span></span>{% else %}{% if p.contributor %}<span class="cr-chip"><span class="cr-role">Contributor</span> <span class="cr-name"><span class="lang-en">{{ p.contributor }}</span><span class="lang-ko">{{ p.contributor_ko | default: p.contributor }}</span></span></span>{% endif %}{% if p.contributor and p.editor %}<span class="cr-sep"> · </span>{% endif %}{% if p.editor %}<span class="cr-chip cr-editor"><span class="cr-role">Editor</span> <span class="cr-name"><span class="lang-en">{{ p.editor }}</span><span class="lang-ko">{{ p.editor_ko | default: p.editor }}</span></span></span>{% endif %}{% endif %}</div>
     {% endif %}
     <div class="postbody">
-      {{ content }}
+      {% if page.collection == 'en_posts' %}{{ p.content }}{% else %}{{ content }}{% endif %}
     </div>
   </div>
 </section>

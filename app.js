@@ -1,11 +1,27 @@
 (function(){
-  try{ if(localStorage.getItem('oxlab-lang')==='ko') document.body.classList.add('ko'); }catch(e){}
+  // 페이지에 처음 보이는 언어는 주소가 정합니다( / = 한국어, /en/ = 영어 ).
+  // 예전처럼 저장된 선택값을 먼저 적용하면 영어 주소에서 한국어가 보일 수 있어 주소를 우선합니다.
   document.documentElement.lang = document.body.classList.contains('ko') ? 'ko' : 'en';
+  // 화면에 보이는 언어에 맞춰 내부 링크를 한국어(/...) 또는 영어(/en/...) 주소로 맞춥니다.
+  // - 메뉴·본문의 주요 페이지 링크: 파일명은 같고 앞에 /en 만 붙거나 빠집니다.
+  // - 글 목록 링크: 서버가 data-href-ko / data-href-en 을 함께 내려 준 것만 바꿉니다(영어 사본이 있을 때만).
+  var TOP_RE = /^(?:\/en)?\/(index|professor|members|research|projects|publications|news|blog|contact)\.html$/;
+  function syncLinks(){
+    var ko = document.body.classList.contains('ko');
+    document.querySelectorAll('a[href]').forEach(function(a){
+      var en = a.getAttribute('data-href-en'), kh = a.getAttribute('data-href-ko');
+      if (en && kh) { a.setAttribute('href', ko ? kh : en); return; }
+      var h = a.getAttribute('href'), i = h.indexOf('#'), hash = i > -1 ? h.slice(i) : '', p = i > -1 ? h.slice(0, i) : h;
+      var m = TOP_RE.exec(p);
+      if (m) a.setAttribute('href', (ko ? '' : '/en') + '/' + m[1] + '.html' + hash);
+    });
+  }
   window.toggleLang=function(){
     document.body.classList.toggle('ko');
     var ko=document.body.classList.contains('ko');
     document.documentElement.lang = ko ? 'ko' : 'en';
     try{ localStorage.setItem('oxlab-lang', ko ? 'ko' : 'en'); }catch(e){}
+    syncLinks();
   };
   var path=(location.pathname.split('/').pop()||'index.html').toLowerCase();
   if(path==='') path='index.html';
@@ -14,6 +30,7 @@
     var dp=a.getAttribute('data-page');
     if(dp===path || (isBlog && dp==='blog.html')) a.classList.add('active');
   });
+  syncLinks();
   var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
 
   // Click-to-zoom lightbox for post images inside .diagram-box

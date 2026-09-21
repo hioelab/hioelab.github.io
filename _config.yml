@@ -13,15 +13,38 @@ og_image: /assets/img/og-cover-v2.png
 plugins:
   - jekyll-sitemap
 
+# 언어별 주소 분리 — 기본 주소(/...)는 한국어, 영어는 /en/... 로 나갑니다.
+#  - en/ 폴더의 페이지들은 한국어 페이지와 같은 본문(_includes/*.html)을 공유합니다.
+#  - 블로그·뉴스 글은 _en_posts/ 폴더에 "같은 파일명의 빈 파일"을 두면
+#    /en/blog/... 주소가 자동으로 생기고 본문은 _posts 의 원문을 그대로 씁니다.
+collections:
+  en_posts:
+    output: true
+    permalink: /en/blog/:year/:month/:day/:title/
+
 # 글 날짜에 시:분:초를 넣어 목록 순서를 조정하는 경우, 빌드 시점보다
 # 늦은 시각이면 Jekyll이 "미래 글"로 보고 숨길 수 있어 항상 표시되게 함.
 future: true
 defaults:
   - scope:
       path: ""
+    values:
+      locale: ko
+  - scope:
+      path: ""
       type: posts
     values:
       permalink: /blog/:year/:month/:day/:title/
+  - scope:
+      path: ""
+      type: en_posts
+    values:
+      layout: post
+      locale: en
+  - scope:
+      path: "en"
+    values:
+      locale: en
 # 빌드에서 제외할 파일(웹사이트엔 안 나옴, 폴더엔 남음)
 exclude:
   - "GitHub_Pages_배포가이드.md"

@@ -1,27 +1,7 @@
 ---
 layout: default
-title: News
-permalink: /news.html
+title: 연구실 소식
 description: "Operations &amp; Experience Lab 소식 — 홍익대학교 경영대학 김승범 교수 연구실의 최근 연구 활동, 수상, 발표 소식을 전합니다."
+permalink: /news.html
 ---
-<section id="news">
-  <div class="wrap">
-    <div class="eyebrow"><span class="lang-en">News</span><span class="lang-ko">소식</span></div>
-    <h2 class="sec"><span class="lang-en">Lab News</span><span class="lang-ko">연구실 소식</span></h2>
-    <p class="lead"><span class="lang-en">Announcements, awards, and project updates from the lab.</span><span class="lang-ko">연구실의 공지, 수상, 프로젝트 소식을 전합니다.</span></p>
-    <div class="feed newsfeed">
-      {% for post in site.posts %}{% if post.category == 'news' %}
-      <a class="fcard {{ post.category }}" href="{{ post.url | relative_url }}">
-        <div class="ftop"></div>
-        <div class="fbody">
-          <div class="fmeta">
-            <span class="fdate">{% if post.year %}{{ post.year }}{% else %}{{ post.date | date: "%Y" }}{% endif %}</span>
-          </div>
-          <h4><span class="lang-en">{{ post.title }}</span><span class="lang-ko">{{ post.title_ko | default: post.title }}</span></h4>
-          {% if post.excerpt_en or post.excerpt_ko %}<p><span class="lang-en">{{ post.excerpt_en }}</span><span class="lang-ko">{{ post.excerpt_ko | default: post.excerpt_en }}</span></p>{% endif %}
-        </div>
-      </a>
-      {% endif %}{% endfor %}
-    </div>
-  </div>
-</section>
+{% include news.html %}

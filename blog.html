@@ -1,25 +1,7 @@
 ---
 layout: default
-title: Blog
-permalink: /blog.html
+title: 블로그·리서치 노트
 description: "Operations &amp; Experience Lab 블로그 — 운영관리·수익관리·고객경험 연구 이야기와 논문 리뷰, 스타트업 사례를 나눕니다."
+permalink: /blog.html
 ---
-<section id="blog">
-  <div class="wrap">
-    <div class="eyebrow"><span class="lang-en">Blog</span><span class="lang-ko">블로그</span></div>
-    <h2 class="sec"><span class="lang-en">Research Notes</span><span class="lang-ko">리서치 노트</span></h2>
-    <p class="lead"><span class="lang-en">Paper reviews and industry newsletters compiled by our lab members.</span><span class="lang-ko">연구실 구성원들이 정리하는 논문 리뷰와 기업 뉴스레터를 전합니다.</span></p>
-    <div class="bloglist" id="bloglist" data-page-size="5">
-      {% for post in site.posts %}{% if post.category == 'blog' %}
-      <a class="blogitem" href="{{ post.url | relative_url }}">
-        <div class="bdate">{{ post.date | date: "%Y.%m.%d" }}</div>
-        <h3><span class="lang-en">{{ post.title }}</span><span class="lang-ko">{{ post.title_ko | default: post.title }}</span></h3>
-        {% if post.excerpt_en or post.excerpt_ko %}
-        <p><span class="lang-en">{{ post.excerpt_en }}</span><span class="lang-ko">{{ post.excerpt_ko | default: post.excerpt_en }}</span></p>
-        {% endif %}
-      </a>
-      {% endif %}{% endfor %}
-    </div>
-    <div class="blogpager" id="blogpager"></div>
-  </div>
-</section>
+{% include blog.html %}
